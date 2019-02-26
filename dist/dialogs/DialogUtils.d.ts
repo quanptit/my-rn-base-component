@@ -6,6 +6,7 @@ import { AlertButton } from "react-native";
 export declare class DialogUtils {
     static overflayContainer: OverflayContainer;
     static showDialog(dialogComponent: BaseDialog | ReactChild): void;
+    static showProgressDialog(message: any, cancelable?: boolean): void;
     /**isTopScreen => show phía trên cùng của screen*/
     static showCommonDialog(title: string, message: string, buttonOk: AlertButton, buttonCancel: AlertButton, isCancelable: boolean, renderOtherChild: any, isTopScreen: boolean): void;
     /**

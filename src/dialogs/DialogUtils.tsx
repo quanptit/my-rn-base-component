@@ -5,6 +5,7 @@ import {isIOS, PreferenceUtils, sendError} from "my-rn-base-utils";
 import {BaseDialog} from "..";
 import {Alert, AlertButton, Linking} from "react-native";
 import CommonDialog from "./CommonDialog";
+import ProgressDialog from "./ProgressDialog";
 
 export class DialogUtils {
     static overflayContainer: OverflayContainer;
@@ -16,6 +17,10 @@ export class DialogUtils {
         else
             sendError("Show Dialog ERROR")
     };
+
+    public static showProgressDialog(message, cancelable = true) {
+        DialogUtils.showDialog(<ProgressDialog message={message} cancelable={cancelable}/>)
+    }
 
     /**isTopScreen => show phía trên cùng của screen*/
     public static showCommonDialog(title: string, message: string, buttonOk: AlertButton, buttonCancel: AlertButton,

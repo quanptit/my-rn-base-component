@@ -3,6 +3,7 @@ import { PopupMenuComponent } from "./PopupMenuComponent";
 import { isIOS, PreferenceUtils, sendError } from "my-rn-base-utils";
 import { Alert, Linking } from "react-native";
 import CommonDialog from "./CommonDialog";
+import ProgressDialog from "./ProgressDialog";
 export class DialogUtils {
     static showDialog(dialogComponent) {
         console.log("Show Dialog");
@@ -12,6 +13,9 @@ export class DialogUtils {
             sendError("Show Dialog ERROR");
     }
     ;
+    static showProgressDialog(message, cancelable = true) {
+        DialogUtils.showDialog(<ProgressDialog message={message} cancelable={cancelable}/>);
+    }
     /**isTopScreen => show phía trên cùng của screen*/
     static showCommonDialog(title, message, buttonOk, buttonCancel, isCancelable = true, renderOtherChild, isTopScreen) {
         DialogUtils.showDialog(<CommonDialog style={isTopScreen ? { justifyContent: "flex-start", paddingTop: 80 } : undefined} title={title} message={message} dismissOnTouchOutside={isCancelable} btnOk={buttonOk} btnCancel={buttonCancel} renderOtherChild={renderOtherChild}/>);
