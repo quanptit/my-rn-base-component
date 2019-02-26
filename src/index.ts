@@ -1,3 +1,5 @@
+export {StyleUtils} from "./StyleUtils";
+
 export {Button} from "./Button";
 export {ComponentUpdateOnlyState} from "./base/ComponentUpdateOnlyState";
 export {PureComponentSkipFunction} from "./base/PureComponentSkipFunction";

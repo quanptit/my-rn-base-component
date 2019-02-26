@@ -1,6 +1,6 @@
 {
   "name": "my-rn-base-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "my-rn-base-component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,9 @@
   "author": "Quan Trinh Van",
   "license": "Quan Trinh Van",
   "nativePackage": true,
-  "dependencies": {},
+  "dependencies": {
+    "my-rn-base-utils": "git+https://gitlab.com/react-native-my-libs/my-rn-base-utils.git"
+  },
   "devDependencies": {
     "react-native-vector-icons": "^4.4.2",
     "lodash": "^4.17.4",
