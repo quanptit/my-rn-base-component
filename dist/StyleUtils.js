@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { PreferenceUtils } from "my-rn-base-utils";
 /**
  * const s = StyleUtils.getAllStyle();
  * s.f_xsmal

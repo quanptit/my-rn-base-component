@@ -1,5 +1,5 @@
 import { PureComponent, ReactChild } from 'react';
-import PopupDialog from "../popupDialog/PopupDialog";
+import PopupDialog from "../dialogs/popupDialog/PopupDialog";
 /**
  * Sử dụng cho các dialog.
  public static showDialog(props?: Props) {
