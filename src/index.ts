@@ -1,5 +1,5 @@
+export {default as PopupDialog} from "./dialogs/popupDialog/PopupDialog";
 export {TextCustom} from "./TextCustom";
-
 export {default as OverflayContainer} from "./dialogs/OverflayContainer";
 export {DialogUtils} from "./dialogs/DialogUtils";
 export {default as Spinner} from "./Spinner";
