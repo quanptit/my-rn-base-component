@@ -2,7 +2,7 @@
 import React from 'react';
 import Orientation from 'react-native-orientation';
 import { Dimensions, TouchableHighlight, View } from 'react-native';
-import { ComponentNoUpdate } from "..";
+import { ComponentNoUpdate } from '../base/ComponentNoUpdate';
 export default class OverflayContainer extends ComponentNoUpdate {
     showPopupMenu(popupMenuComponent, positionAnschor) {
         console.log("showPopupMenu");

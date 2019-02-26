@@ -2,7 +2,7 @@
 import React, {Component, ReactChild} from 'react'
 import Orientation from 'react-native-orientation'
 import {Dimensions, TouchableHighlight, View, ViewProps} from 'react-native'
-import {ComponentNoUpdate} from "..";
+import {ComponentNoUpdate} from '../base/ComponentNoUpdate';
 
 export interface PositionAnchor {
     x: number,

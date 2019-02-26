@@ -1,6 +1,6 @@
 import { ReactChild } from 'react';
 import { ViewProps } from 'react-native';
-import { ComponentNoUpdate } from "..";
+import { ComponentNoUpdate } from '../base/ComponentNoUpdate';
 export interface PositionAnchor {
     x: number;
     y: number;
