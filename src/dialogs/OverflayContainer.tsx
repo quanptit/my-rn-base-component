@@ -36,6 +36,9 @@ export default class OverflayContainer extends ComponentNoUpdate<Props, any> {
     }
 
     showDialog(dialogComponent) {
+        if (this.dialogComponent != null)
+            this.hideDialog();
+
         this.dialogComponent = dialogComponent;
         this.forceUpdate();
     }
