@@ -11,5 +11,5 @@ export interface ContainerProps {
     enablemeasureInWindow?: boolean;
 }
 export declare class Col extends Component<ContainerProps, any> {
-    render(): any;
+    render(): JSX.Element;
 }

@@ -11,7 +11,7 @@ export declare abstract class BaseDialog<P = {}, S = {}> extends PureComponent<P
     protected abstract getWidth(): number | string;
     protected abstract renderContent(): ReactChild;
     protected getHeight(): number | string;
-    render(): any;
+    render(): JSX.Element;
     show(onShowed?: any): void;
     dismiss(onDismissed?: any): void;
 }

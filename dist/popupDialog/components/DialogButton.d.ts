@@ -5,5 +5,5 @@ export default class DialogButton extends Component<DialogButtonType, any> {
         disabled: boolean;
         align: string;
     };
-    render(): any;
+    render(): JSX.Element;
 }

@@ -1,5 +1,5 @@
-import {TouchableNativeFeedback, TouchableOpacity, View, ViewProps, Platform} from "react-native"
 import React, {Component} from 'react'
+import {TouchableNativeFeedback, TouchableOpacity, View, ViewProps, Platform} from "react-native"
 
 export interface TouchableProperties extends ViewProps {
     onPress: () => any

@@ -5,5 +5,5 @@ export default class DialogTitle extends Component<DialogTitleType, any> {
         titleAlign: string;
         haveTitleBar: boolean;
     };
-    render(): any;
+    render(): JSX.Element;
 }

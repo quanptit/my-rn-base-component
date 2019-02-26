@@ -13,6 +13,6 @@ declare class Overlay extends Component<OverlayType, any> {
     };
     constructor(props: OverlayType);
     componentWillReceiveProps(nextProps: OverlayType): void;
-    render(): any;
+    render(): JSX.Element;
 }
 export default Overlay;

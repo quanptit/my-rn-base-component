@@ -26,6 +26,6 @@ declare class Dialog extends Component {
     dismiss(onDismissed?: () => {}): void;
     readonly pointerEvents: string;
     readonly dialogSize: Object;
-    render(): any;
+    render(): JSX.Element;
 }
 export default Dialog;

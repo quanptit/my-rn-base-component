@@ -1,5 +1,5 @@
-import { TouchableNativeFeedback, TouchableOpacity, View, Platform } from "react-native";
 import React, { Component } from 'react';
+import { TouchableNativeFeedback, TouchableOpacity, View, Platform } from "react-native";
 export class Touchable extends Component {
     render() {
         if (Platform.OS === "ios") {
