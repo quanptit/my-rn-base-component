@@ -1,9 +1,9 @@
 import React, {ReactChild} from 'react'
 import OverflayContainer, {PositionAnchor} from "./OverflayContainer";
 import {PopupMenuComponent, SubMenuSettingObj} from "./PopupMenuComponent";
-import {PreferenceUtils, sendError} from "my-rn-base-utils";
+import {isIOS, PreferenceUtils, sendError} from "my-rn-base-utils";
 import {BaseDialog} from "..";
-import {Alert,  AlertButton} from "react-native";
+import {Alert, AlertButton, Linking} from "react-native";
 import CommonDialog from "./CommonDialog";
 
 export class DialogUtils {
@@ -86,7 +86,11 @@ export class DialogUtils {
         if (isIOS()) {
             Linking.openURL("https://itunes.apple.com/app/id" + iosId + "#").catch(err => console.error('An error occurred', err))
         } else {
-            RNAppUtils.ANDROID_openAppFromMarket(androidID)
+            Linking.openURL("market://details?id=" + androidID).catch(err => {
+                console.error('An error occurred', err);
+                Linking.openURL("https://play.google.com/store/apps/details?id=" + androidID)
+                    .catch(err => sendError(err));
+            });
         }
         PreferenceUtils.saveBooleanSettingCallback("HAS_VOTE_APP", true)
     }
@@ -102,7 +106,7 @@ export class DialogUtils {
         }
 
         if (!anchorComponent.measureInWindow) {
-            sendError("Không tồn tại phương thức measureInWindow")
+            sendError("Không tồn tại phương thức measureInWindow");
             return
         }
 
