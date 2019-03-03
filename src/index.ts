@@ -1,6 +1,4 @@
-declare global {
-    interface VoidFunction {(): void;}
-}
+export {default as Toast}  from "./Toast";
 
 export {default as PopupDialog} from "./dialogs/popupDialog/PopupDialog";
 export {TextCustom} from "./TextCustom";
@@ -17,3 +15,6 @@ export {Col} from "./Col";
 export {Row} from "./Row";
 export {Touchable} from "./Touchable";
 export {BaseDialog} from "./base/BaseDialog";
+declare global {
+    interface VoidFunction {(): void;}
+}
