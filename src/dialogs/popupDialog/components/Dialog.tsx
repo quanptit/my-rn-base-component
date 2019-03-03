@@ -13,7 +13,7 @@ import Overlay from './Overlay'
 import DefaultAnimation from '../animations/DefaultAnimation'
 import {DialogType} from '../Type'
 
-const {width: screenWidth, height: screenHeight} = Dimensions.get('window')
+const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
 
 // dialog states
 const DIALOG_OPENING: string = 'opening'
@@ -149,7 +149,9 @@ class Dialog extends Component {
 
     dismiss(onDismissed?: () => {}) {
         this.setDialogState(0, () => {
-            this.props.onDismissed && this.props.onDismissed()
+            const DialogUtils = require("../../DialogUtils");
+            DialogUtils.hideDialog();
+            this.props.onDismissed && this.props.onDismissed();
             onDismissed && onDismissed()
         })
     }

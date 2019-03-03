@@ -105,6 +105,8 @@ class Dialog extends Component {
     }
     dismiss(onDismissed) {
         this.setDialogState(0, () => {
+            const DialogUtils = require("../../DialogUtils");
+            DialogUtils.hideDialog();
             this.props.onDismissed && this.props.onDismissed();
             onDismissed && onDismissed();
         });

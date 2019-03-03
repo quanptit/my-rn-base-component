@@ -1,3 +1,7 @@
+declare global {
+    interface VoidFunction {(): void;}
+}
+
 export {default as PopupDialog} from "./dialogs/popupDialog/PopupDialog";
 export {TextCustom} from "./TextCustom";
 export {default as OverflayContainer} from "./dialogs/OverflayContainer";
