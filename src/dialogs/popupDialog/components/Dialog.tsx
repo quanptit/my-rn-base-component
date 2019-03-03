@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 
 import Overlay from './Overlay'
+// import {DialogUtils} from "../../DialogUtils"
 
 import DefaultAnimation from '../animations/DefaultAnimation'
 import {DialogType} from '../Type'
@@ -149,7 +150,7 @@ class Dialog extends Component {
 
     dismiss(onDismissed?: () => {}) {
         this.setDialogState(0, () => {
-            const DialogUtils = require("../../DialogUtils");
+            const {DialogUtils} = require("../../DialogUtils");
             DialogUtils.hideDialog();
             this.props.onDismissed && this.props.onDismissed();
             onDismissed && onDismissed()
