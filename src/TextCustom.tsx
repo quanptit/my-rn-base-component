@@ -1,5 +1,5 @@
-import React, {Component, PureComponent} from 'react'
-import {Text, TextProps, TextStyle, View, StyleSheet} from 'react-native'
+import React, {PureComponent} from 'react'
+import {Text, TextProps, View, StyleSheet} from 'react-native'
 import {isIOS} from "my-rn-base-utils";
 
 interface Props extends TextProps {
