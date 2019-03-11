@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export declare class RenderUtils {
     static renderIcon(name: string, fontSize?: number, color?: string, style?: any): JSX.Element;
     static renderMaterialIcon(name: string, fontSize?: number, color?: string, style?: any): JSX.Element;

@@ -1,3 +1,4 @@
+export { ComboBox } from "./ComboBox";
 export { VContainerLoad, VContainerLoadProps } from "./VContainerLoad";
 export { default as Toast } from "./Toast";
 export { default as PopupDialog } from "./dialogs/popupDialog/PopupDialog";
