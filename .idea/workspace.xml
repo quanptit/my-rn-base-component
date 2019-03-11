@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/RenderUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/utils/RenderUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/RenderUtils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/RenderUtils.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="252">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils/RenderUtils.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +128,11 @@
       <find>Orientation</find>
       <find>dismis</find>
       <find>DialogUtils</find>
+      <find>assets</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -156,12 +173,12 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/dialogs/popupDialog/components/Dialog.tsx" />
         <option value="$PROJECT_DIR$/src/TextCustom.tsx" />
-        <option value="$PROJECT_DIR$/src/utils/RenderUtils.tsx" />
         <option value="$PROJECT_DIR$/src/Touchable.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/VContainerLoad.tsx" />
         <option value="$PROJECT_DIR$/src/StyleUtils.ts" />
         <option value="$PROJECT_DIR$/src/index.ts" />
+        <option value="$PROJECT_DIR$/src/utils/RenderUtils.tsx" />
       </list>
     </option>
   </component>
@@ -223,11 +240,6 @@
               <item name="my-rn-base-component" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-rn-base-component" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my-rn-base-component" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-rn-base-component" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -258,13 +270,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src\assets" />
       <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src\utils" />
       <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src" />
       <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src\dialogs" />
       <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src\base" />
-      <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\base" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\Codes\react-native-my-libs\my-rn-base-component" />
       <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src\dialogs" />
       <recent name="S:\Codes\react-native-my-libs\my-rn-base-component\src" />
     </key>
@@ -329,7 +342,7 @@
       <workItem from="1551602004562" duration="96000" />
       <workItem from="1552051553032" duration="914000" />
       <workItem from="1552223694740" duration="18000" />
-      <workItem from="1552268131428" duration="2684000" />
+      <workItem from="1552268131428" duration="3454000" />
     </task>
     <task id="LOCAL-00001" summary="first init">
       <created>1551059137537</created>
@@ -520,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552270182795</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="first init">
+      <created>1552272899016</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1552272899016</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25102000" />
+    <option name="totallyTimeSpent" value="25872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -843,16 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/RenderUtils.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/my-rn-base-utils/src/CommonUtils.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -896,8 +906,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="252">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/utils/RenderUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/RenderUtils.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

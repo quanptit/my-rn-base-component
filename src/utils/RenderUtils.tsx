@@ -27,7 +27,7 @@ export class RenderUtils {
         return <CachedImage
             {...props}
             source={{uri: url}}
-            defaultSource={require("../assets/placeholder.jpg")}
+            defaultSource={require("../../assets/placeholder.jpg")}
             style={style}/>
     }
 
