@@ -74,7 +74,7 @@ export class StyleUtils {
         const fontLarge = this.getFontLarge();
         const fontXLarge = this.getFontXLarge();
 
-        StyleUtils.allStyle = StyleSheet.create<IStyle>({
+        StyleUtils.allStyle = StyleSheet.create<any>({
             // region margin && padding
             m_left_small: {marginLeft: 3},
             m_right_small: {marginRight: 3},

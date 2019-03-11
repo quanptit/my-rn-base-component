@@ -13,17 +13,10 @@
   "author": "Quan Trinh Van",
   "license": "Quan Trinh Van",
   "nativePackage": true,
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/lodash": "^4.14.93",
-    "@types/react": "16.4.14",
-    "@types/react-native": "0.56.23",
-    "lodash": "^4.17.4",
-    "react": "^16.3.1",
-    "react-native": "^0.55.4",
-    "react-native-vector-icons": "^4.4.2"
+    "my-rn-base-utils": "git+https://gitlab.com/react-native-my-libs/my-rn-base-utils.git",
+    "my-rn-common-resource": "git+https://gitlab.com/react-native-my-libs/my-rn-common-resource.git"
   },
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }
