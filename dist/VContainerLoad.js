@@ -16,7 +16,7 @@ export class VContainerLoad extends Component {
     }
     async componentDidMount() {
         this._isMounted = true;
-        await this.reload();
+        await this.reload(this.props.onReady);
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.id !== this.props.id)
@@ -25,7 +25,7 @@ export class VContainerLoad extends Component {
     componentWillUnmount() {
         this._isMounted = false;
     }
-    async reload() {
+    async reload(callback) {
         this.id = this.props.id;
         if (!this.state.isLoading)
             this.setState({ isLoading: true, isError: false });
@@ -34,7 +34,12 @@ export class VContainerLoad extends Component {
             if (this.props.isUsingInteraction)
                 await CommonUtils.waitAfterInteractions();
             if (this.props.id === this.id && this._isMounted)
-                this.setState({ isLoading: false, isError: !success });
+                this.setState({ isLoading: false, isError: !success }, async () => {
+                    if (success) {
+                        await CommonUtils.requestAnimationFrameWithPromise();
+                        callback && callback();
+                    }
+                });
         }
         catch (e) {
             sendError(e);
@@ -54,7 +59,10 @@ export class VContainerLoad extends Component {
             return this._renderLoading();
         if (this.state.isError)
             return this._renderError();
-        return this.props.onRender();
+        if (this.props.contentContainerStyle)
+            return <View style={this.props.contentContainerStyle}> {this.props.onRender()}</View>;
+        else
+            return this.props.onRender();
     }
     _renderError() {
         let showCloseButtonWhenError = this.props.showCloseButtonWhenError;

@@ -7,6 +7,7 @@ interface State {
 export interface VContainerLoadProps {
     loadDataAsync: () => Promise<boolean>;
     onRender: () => ReactChild;
+    onReady?: VoidFunction;
     id?: string | number;
     hide?: boolean;
     showCloseButtonWhenError?: boolean;
@@ -27,7 +28,7 @@ export declare abstract class VContainerLoad extends Component<VContainerLoadPro
     componentDidMount(): Promise<void>;
     componentDidUpdate(prevProps: VContainerLoadProps, prevState: any, snapshot: any): Promise<void>;
     componentWillUnmount(): void;
-    reload(): Promise<void>;
+    reload(callback?: VoidFunction): Promise<void>;
     shouldComponentUpdate(nextProps: VContainerLoadProps, nextState: any): boolean;
     render(): string | number | JSX.Element;
     protected _renderError(): JSX.Element;

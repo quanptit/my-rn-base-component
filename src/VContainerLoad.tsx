@@ -15,6 +15,7 @@ interface State {
 export interface VContainerLoadProps {
     loadDataAsync: () => Promise<boolean>;
     onRender: () => ReactChild;
+    onReady?: VoidFunction
     id?: string | number;
     hide?: boolean;
     showCloseButtonWhenError?: boolean
@@ -40,7 +41,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
 
     async componentDidMount() {
         this._isMounted = true;
-        await this.reload();
+        await this.reload(this.props.onReady);
     }
 
     async componentDidUpdate(prevProps: VContainerLoadProps, prevState, snapshot) {
@@ -53,7 +54,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
     }
 
 
-    async reload() {
+    async reload(callback?: VoidFunction) {
         this.id = this.props.id;
         if (!this.state.isLoading)
             this.setState({isLoading: true, isError: false});
@@ -61,7 +62,12 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
             let success = await this.props.loadDataAsync();
             if (this.props.isUsingInteraction) await CommonUtils.waitAfterInteractions();
             if (this.props.id === this.id && this._isMounted)
-                this.setState({isLoading: false, isError: !success});
+                this.setState({isLoading: false, isError: !success}, async () => {
+                    if (success) {
+                        await CommonUtils.requestAnimationFrameWithPromise();
+                        callback && callback();
+                    }
+                });
         } catch (e) {
             sendError(e);
             if (this.props.id === this.id && this._isMounted)
@@ -81,7 +87,11 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
             return this._renderLoading();
         if (this.state.isError)
             return this._renderError();
-        return this.props.onRender();
+
+        if (this.props.contentContainerStyle)
+            return <View style={this.props.contentContainerStyle}> {this.props.onRender()}</View>;
+        else
+            return this.props.onRender();
     }
 
     protected _renderError() {
