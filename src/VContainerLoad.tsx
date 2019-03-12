@@ -89,7 +89,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
             return this._renderError();
 
         if (this.props.contentContainerStyle)
-            return <View style={this.props.contentContainerStyle}> {this.props.onRender()}</View>;
+            return <View style={this.props.contentContainerStyle}>{this.props.onRender()}</View>;
         else
             return this.props.onRender();
     }
