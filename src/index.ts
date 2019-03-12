@@ -18,6 +18,7 @@ export {Col, ContainerProps} from "./Col";
 export {Row} from "./Row";
 export {Touchable} from "./Touchable";
 export {BaseDialog} from "./base/BaseDialog";
+export {RenderUtils} from "./utils/RenderUtils";
 declare global {
     interface VoidFunction {(): void;}
 }
