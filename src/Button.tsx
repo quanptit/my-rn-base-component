@@ -10,7 +10,7 @@ import {
     StyleProp,
     TextStyle,
     ViewStyle,
-    ImageProps, ViewProps
+    ImageProps
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -18,7 +18,7 @@ export enum ButtonModel {
     primary = 1, light, success, info, warning, danger, dark, transparent, border
 }
 
-export interface ButtonProps extends ViewProps {
+export interface ButtonProps {
     model?: ButtonModel
     primaryColor?: string;
     isLoading?: boolean;
@@ -47,6 +47,8 @@ export interface ButtonProps extends ViewProps {
     onLongPress?: () => any;
     onPressIn?: () => any;
     onPressOut?: () => any;
+
+    style?: StyleProp<ViewStyle>
 }
 
 export class Button extends PureComponent<ButtonProps> {

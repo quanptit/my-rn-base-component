@@ -1,5 +1,5 @@
 import { PureComponent } from 'react';
-import { StyleProp, TextStyle, ViewStyle, ImageProps, ViewProps } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle, ImageProps } from 'react-native';
 export declare enum ButtonModel {
     primary = 1,
     light = 2,
@@ -11,7 +11,7 @@ export declare enum ButtonModel {
     transparent = 8,
     border = 9
 }
-export interface ButtonProps extends ViewProps {
+export interface ButtonProps {
     model?: ButtonModel;
     primaryColor?: string;
     isLoading?: boolean;
@@ -41,6 +41,7 @@ export interface ButtonProps extends ViewProps {
     onLongPress?: () => any;
     onPressIn?: () => any;
     onPressOut?: () => any;
+    style?: StyleProp<ViewStyle>;
 }
 export declare class Button extends PureComponent<ButtonProps> {
     static defaultProps: {
