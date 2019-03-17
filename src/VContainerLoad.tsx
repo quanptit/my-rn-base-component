@@ -16,6 +16,7 @@ export interface VContainerLoadProps {
     loadDataAsync: () => Promise<boolean>;
     onRender: () => ReactChild;
     onReady?: VoidFunction
+    onError?: VoidFunction
     id?: string | number;
     hide?: boolean;
     showCloseButtonWhenError?: boolean
@@ -70,8 +71,11 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
                 });
         } catch (e) {
             sendError(e);
-            if (this.props.id === this.id && this._isMounted)
+            if (this.props.id === this.id && this._isMounted) {
                 this.setState({isLoading: false, isError: true});
+                await CommonUtils.requestAnimationFrameWithPromise();
+                this.props.onError && this.props.onError();
+            }
         }
     }
 

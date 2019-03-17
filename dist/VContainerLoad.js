@@ -43,8 +43,11 @@ export class VContainerLoad extends Component {
         }
         catch (e) {
             sendError(e);
-            if (this.props.id === this.id && this._isMounted)
+            if (this.props.id === this.id && this._isMounted) {
                 this.setState({ isLoading: false, isError: true });
+                await CommonUtils.requestAnimationFrameWithPromise();
+                this.props.onError && this.props.onError();
+            }
         }
     }
     shouldComponentUpdate(nextProps, nextState) {

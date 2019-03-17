@@ -8,6 +8,7 @@ export interface VContainerLoadProps {
     loadDataAsync: () => Promise<boolean>;
     onRender: () => ReactChild;
     onReady?: VoidFunction;
+    onError?: VoidFunction;
     id?: string | number;
     hide?: boolean;
     showCloseButtonWhenError?: boolean;

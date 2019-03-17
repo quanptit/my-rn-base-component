@@ -45,29 +45,4 @@ export class RenderUtils {
             </Touchable>
         )
     }
-
-    // //region Ads
-    // /**return row ads nếu như obj đó là ads obj. else return null
-    //  * */
-    // public static renderRowAds(adsObj: AdsObj, style?) {
-    //     if (adsObj.large != undefined)
-    //         return this.renderAdsComponent(adsObj, style);
-    //     return undefined
-    // }
-    //
-    // public static renderAdsComponent(adsObj: AdsObj, style?) {
-    //     return (
-    //         <View style={style}>
-    //             <NativeAdsView large={adsObj.large} typeAds={adsObj.typeAds} allowBannerBackup={adsObj.allowBannerBackup}/>
-    //         </View>
-    //     )
-    // }
-    //
-    // public static renderBannerAdsComponent(style?) {
-    //     return (
-    //         <BannerAdsView style={style}/>
-    //     )
-    // }
-    //
-    // //endregion
 }
