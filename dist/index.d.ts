@@ -16,6 +16,11 @@ export { Row } from "./Row";
 export { Touchable } from "./Touchable";
 export { BaseDialog } from "./base/BaseDialog";
 export { RenderUtils } from "./utils/RenderUtils";
+export { MyTextInput } from "./MyTextInput";
+export { HorizontalProgressBar } from "./HorizontalProgressBar";
+export { default as HTMLView } from "./HTMLView";
+export { FlatListCustom } from "./FlatListCustom";
+export { FlatListLoad } from "./FlatListLoad";
 declare global {
     interface VoidFunction {
         (): void;
