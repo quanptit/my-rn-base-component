@@ -42,7 +42,7 @@ export default class OverflayContainer extends ComponentNoUpdate {
     }
     render() {
         if (this.dialogComponent) {
-            return (<View style={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0 }} pointerEvents="box-none">
+            return (<View {...this.props} style={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0 }} pointerEvents="box-none">
                     {this.dialogComponent}
                     {this.overComponent && this._renderOverComponent()}
                 </View>);
