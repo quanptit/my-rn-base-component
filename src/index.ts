@@ -1,5 +1,6 @@
-export {ComboBox} from "./ComboBox";
+export {CheckBox} from "./CheckBox";
 
+export {ComboBox} from "./ComboBox";
 export {VContainerLoad, VContainerLoadProps} from "./VContainerLoad";
 export {default as Toast}  from "./Toast";
 

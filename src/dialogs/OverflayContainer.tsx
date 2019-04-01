@@ -78,7 +78,7 @@ export default class OverflayContainer extends ComponentNoUpdate<Props, any> {
         }
 
         if (this.overComponent)
-            return this._renderOverComponent()
+            return this._renderOverComponent();
 
         return null
     }
