@@ -33,7 +33,7 @@ export class VContainerLoad extends Component {
             let success = await this.props.loadDataAsync();
             if (this.props.isUsingInteraction)
                 await CommonUtils.waitAfterInteractions();
-            if (this.props.id === this.id && this._isMounted)
+            if (this.props.id === this.id && this._isMounted) // mục đích xác định sau khi tải xong, id vẫn đúng mới update
                 this.setState({ isLoading: false, isError: !success }, async () => {
                     if (success) {
                         await CommonUtils.requestAnimationFrameWithPromise();
