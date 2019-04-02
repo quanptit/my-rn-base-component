@@ -8,7 +8,7 @@ export { default as OverflayContainer } from "./dialogs/OverflayContainer";
 export { DialogUtils } from "./dialogs/DialogUtils";
 export { default as Spinner } from "./Spinner";
 export { StyleUtils } from "./StyleUtils";
-export { Button, ButtonModel } from "./Button";
+export { Button, ButtonModel, ButtonProps } from "./Button";
 export { ComponentUpdateOnlyState } from "./base/ComponentUpdateOnlyState";
 export { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
 export { ComponentNoUpdate } from "./base/ComponentNoUpdate";
