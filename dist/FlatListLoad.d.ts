@@ -33,7 +33,9 @@ interface State {
     isError: boolean;
 }
 /**
- * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây
+ * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
+ * Chỉ thay đổi khi props id thay dổi
+ * Muốn tải lại data gọi: notifyDataSetChanged
  * */
 export declare class FlatListLoad extends Component<Props, State> {
     static defaultProps: {

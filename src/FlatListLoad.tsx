@@ -35,7 +35,9 @@ interface State {
 }
 
 /**
- * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây
+ * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
+ * Chỉ thay đổi khi props id thay dổi
+ * Muốn tải lại data gọi: notifyDataSetChanged
  * */
 export class FlatListLoad extends Component<Props, State> {
     static defaultProps = {
@@ -80,7 +82,10 @@ export class FlatListLoad extends Component<Props, State> {
                 if (this.props.id === this.id && this._isMounted) {
                     if (this.props.isUsingInteraction) await CommonUtils.waitAfterInteractions();
                     this.setState((prevState: State) => {
-                        return {listItems: newListItem, extraData: prevState.extraData + 1, isLoading: false, isError: false}
+                        return {
+                            listItems: newListItem, extraData: prevState.extraData + 1,
+                            isLoading: false, isError: false
+                        }
                     });
                 }
             } catch (e) {

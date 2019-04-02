@@ -7,7 +7,9 @@ import { RenderUtils } from './utils/RenderUtils';
 import Spinner from './Spinner';
 import { Button, ButtonModel } from './Button';
 /**
- * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây
+ * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
+ * Chỉ thay đổi khi props id thay dổi
+ * Muốn tải lại data gọi: notifyDataSetChanged
  * */
 export class FlatListLoad extends Component {
     constructor(props) {
@@ -42,7 +44,10 @@ export class FlatListLoad extends Component {
                     if (this.props.isUsingInteraction)
                         await CommonUtils.waitAfterInteractions();
                     this.setState((prevState) => {
-                        return { listItems: newListItem, extraData: prevState.extraData + 1, isLoading: false, isError: false };
+                        return {
+                            listItems: newListItem, extraData: prevState.extraData + 1,
+                            isLoading: false, isError: false
+                        };
                     });
                 }
             }
