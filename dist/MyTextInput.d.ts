@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { StyleProp, TextStyle } from 'react-native';
+import { ReturnKeyTypeOptions, StyleProp, TextStyle } from 'react-native';
 import { ComponentNoUpdate } from "./base/ComponentNoUpdate";
 interface Props {
     style?: StyleProp<TextStyle>;
@@ -7,6 +7,7 @@ interface Props {
     editable?: boolean;
     onChangeText?: (text: string) => void;
     placeholder?: string;
+    returnKeyType?: ReturnKeyTypeOptions;
     multiline?: boolean;
 }
 interface State {

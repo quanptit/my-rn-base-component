@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {StyleProp, StyleSheet, TextInput, TextInputProps, TextStyle, ViewStyle} from 'react-native'
+import {ReturnKeyTypeOptions, StyleProp, StyleSheet, TextInput, TextInputProps, TextStyle, ViewStyle} from 'react-native'
 import {ComponentNoUpdate} from "./base/ComponentNoUpdate";
 
 interface Props {
@@ -8,6 +8,7 @@ interface Props {
     editable?: boolean
     onChangeText?: (text: string) => void;
     placeholder?: string
+    returnKeyType?: ReturnKeyTypeOptions
     multiline?: boolean
 }
 
