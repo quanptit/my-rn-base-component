@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Insets, ListRenderItem, StyleProp, ViewStyle } from 'react-native';
+import { Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, StyleProp, ViewStyle } from 'react-native';
 interface Props {
     id?: number | string;
     loadDataAsync: () => Promise<any[]>;
@@ -25,6 +25,8 @@ interface Props {
     };
     contentInset?: Insets;
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
+    contentContainerStyle?: StyleProp<ViewStyle>;
+    onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }
 interface State {
     extraData: number;
@@ -34,13 +36,9 @@ interface State {
 }
 /**
  * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
- * Chỉ thay đổi khi props id thay dổi
- * Muốn tải lại data gọi: notifyDataSetChanged
+ * Chỉ cập nhật khi prop: id thay đổi. các props khác không tính
  * */
 export declare class FlatListLoad extends Component<Props, State> {
-    static defaultProps: {
-        isUsingInteraction: boolean;
-    };
     private flatList;
     private _isMounted;
     private id;
@@ -55,5 +53,9 @@ export declare class FlatListLoad extends Component<Props, State> {
     private _renderError;
     private _renderLoading;
     private static _renderXbutton;
+    /**
+     * showLoaddingBefore: show loading trước, sau đó mới show content load khi đã có data
+     * */
+    getListItems(): any[];
 }
 export {};

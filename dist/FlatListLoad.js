@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { FlatList, View } from 'react-native';
-import { CommonUtils, sendError, isEmpty, isIOS } from "my-rn-base-utils";
-import { isEqual } from 'lodash';
+import Spinner from "./Spinner";
+import { Button, ButtonModel } from "./Button";
 import { getStringsCommon } from "my-rn-common-resource";
-import { RenderUtils } from './utils/RenderUtils';
-import Spinner from './Spinner';
-import { Button, ButtonModel } from './Button';
+import { CommonUtils, isEmpty, isIOS, sendError } from "my-rn-base-utils";
+import { isEqual } from "my-rn-base-utils/dist/CommonUtils";
+import { RenderUtils } from "./utils/RenderUtils";
 /**
  * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
- * Chỉ thay đổi khi props id thay dổi
- * Muốn tải lại data gọi: notifyDataSetChanged
+ * Chỉ cập nhật khi prop: id thay đổi. các props khác không tính
  * */
 export class FlatListLoad extends Component {
     constructor(props) {
@@ -44,15 +43,12 @@ export class FlatListLoad extends Component {
                     if (this.props.isUsingInteraction)
                         await CommonUtils.waitAfterInteractions();
                     this.setState((prevState) => {
-                        return {
-                            listItems: newListItem, extraData: prevState.extraData + 1,
-                            isLoading: false, isError: false
-                        };
+                        return { listItems: newListItem, extraData: prevState.extraData + 1, isLoading: false, isError: false };
                     });
                 }
             }
             catch (e) {
-                sendError(e);
+                sendError("_LoadStartAsync Error: " + e);
                 if (this.props.id === this.id && this._isMounted) {
                     if (this.props.isUsingInteraction)
                         await CommonUtils.waitAfterInteractions();
@@ -69,7 +65,7 @@ export class FlatListLoad extends Component {
         }
     }
     shouldComponentUpdate(nextProps, nextState) {
-        return nextState.extraData != this.state.extraData || !isEqual(nextProps.id, this.props.id);
+        return nextState.extraData !== this.state.extraData || !isEqual(nextProps.id, this.props.id);
     }
     render() {
         if (isEmpty(this.state.listItems)) {
@@ -93,7 +89,9 @@ export class FlatListLoad extends Component {
             scrollsToTop: false,
             scrollEventThrottle: 16,
             contentInset: this.props.contentInset,
-            ListFooterComponent: this.props.ListFooterComponent
+            ListFooterComponent: this.props.ListFooterComponent,
+            contentContainerStyle: this.props.contentContainerStyle,
+            onScroll: this.props.onScroll
             // keyboardShouldPersistTaps: "always"
         };
         return (<FlatList ref={(ref) => { this.flatList = ref; }} {...props}/>);
@@ -121,7 +119,22 @@ export class FlatListLoad extends Component {
                 {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
             </Button>);
     }
+    /**
+     * showLoaddingBefore: show loading trước, sau đó mới show content load khi đã có data
+     * */
+    // getItemData(index) {
+    //     return this.listItems && this.listItems[index]
+    // }
+    //
+    // getListItems() {
+    //     return this.listItems
+    // }
+    //
+    // getItemCount() {
+    //     return this.listItems && this.listItems.length
+    // }
+    //endregion
+    getListItems() {
+        return this.state.listItems;
+    }
 }
-FlatListLoad.defaultProps = {
-    isUsingInteraction: true
-};

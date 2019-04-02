@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import {FlatList, FlatListProps, Insets, ListRenderItem, StyleProp, View, ViewStyle} from 'react-native'
-import {CommonUtils, sendError, isEmpty, isIOS} from "my-rn-base-utils";
-import {isEqual} from 'lodash';
+import {FlatList, FlatListProps, Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, StyleProp, View, ViewStyle} from 'react-native'
+import Spinner from "./Spinner";
+import {Button, ButtonModel} from "./Button";
 import {getStringsCommon} from "my-rn-common-resource";
-import {RenderUtils} from './utils/RenderUtils';
-import Spinner from './Spinner';
-import {Button, ButtonModel} from './Button';
+import {CommonUtils, isEmpty, isIOS, sendError} from "my-rn-base-utils";
+import {isEqual} from "my-rn-base-utils/dist/CommonUtils";
+import {RenderUtils} from "./utils/RenderUtils";
 
 interface Props {
     id?: number | string
@@ -23,8 +23,10 @@ interface Props {
     contentOffset?: { x: number, y: number } // {x: 0, y: 50}, Thường sử dụng để quảng cáo Banner không che nội dung
     horizontal?: boolean
     getItemLayout?: (data, index) => { length: number, offset: number, index: number }
-    contentInset?: Insets
+    contentInset?:Insets
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null
+    contentContainerStyle?:StyleProp<ViewStyle>
+    onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }
 
 interface State {
@@ -36,14 +38,9 @@ interface State {
 
 /**
  * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
- * Chỉ thay đổi khi props id thay dổi
- * Muốn tải lại data gọi: notifyDataSetChanged
+ * Chỉ cập nhật khi prop: id thay đổi. các props khác không tính
  * */
 export class FlatListLoad extends Component<Props, State> {
-    static defaultProps = {
-        isUsingInteraction: true
-    };
-
     private flatList: any;
     private _isMounted: boolean;
     private id: number | string;
@@ -82,14 +79,11 @@ export class FlatListLoad extends Component<Props, State> {
                 if (this.props.id === this.id && this._isMounted) {
                     if (this.props.isUsingInteraction) await CommonUtils.waitAfterInteractions();
                     this.setState((prevState: State) => {
-                        return {
-                            listItems: newListItem, extraData: prevState.extraData + 1,
-                            isLoading: false, isError: false
-                        }
+                        return {listItems: newListItem, extraData: prevState.extraData + 1, isLoading: false, isError: false}
                     });
                 }
             } catch (e) {
-                sendError(e);
+                sendError("_LoadStartAsync Error: " + e);
                 if (this.props.id === this.id && this._isMounted) {
                     if (this.props.isUsingInteraction) await CommonUtils.waitAfterInteractions();
                     this.setState((prevState: State) => {
@@ -105,7 +99,7 @@ export class FlatListLoad extends Component<Props, State> {
     }
 
     shouldComponentUpdate(nextProps, nextState: any) {
-        return nextState.extraData != this.state.extraData || !isEqual(nextProps.id, this.props.id);
+        return nextState.extraData !== this.state.extraData || !isEqual(nextProps.id, this.props.id);
     }
 
     render() {
@@ -131,7 +125,9 @@ export class FlatListLoad extends Component<Props, State> {
             scrollsToTop: false,
             scrollEventThrottle: 16,
             contentInset: this.props.contentInset,
-            ListFooterComponent: this.props.ListFooterComponent
+            ListFooterComponent:this.props.ListFooterComponent,
+            contentContainerStyle: this.props.contentContainerStyle,
+            onScroll: this.props.onScroll
             // keyboardShouldPersistTaps: "always"
         };
         return (
@@ -189,4 +185,7 @@ export class FlatListLoad extends Component<Props, State> {
 
 
     //endregion
+    getListItems() {
+        return this.state.listItems;
+    }
 }
