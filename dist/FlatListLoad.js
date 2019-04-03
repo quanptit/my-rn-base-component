@@ -4,7 +4,7 @@ import Spinner from "./Spinner";
 import { Button, ButtonModel } from "./Button";
 import { getStringsCommon } from "my-rn-common-resource";
 import { CommonUtils, isEmpty, isIOS, sendError } from "my-rn-base-utils";
-import { isEqual } from "my-rn-base-utils/dist/CommonUtils";
+import { isEqual } from "lodash";
 import { RenderUtils } from "./utils/RenderUtils";
 /**
  * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.

@@ -19,8 +19,6 @@
     "react-native-cached-image": "git+https://gitlab.com/ReactNativeLib/react-native-cached-image.git"
   },
   "devDependencies": {
-    "my-rn-base-utils": "git+https://gitlab.com/react-native-my-libs/my-rn-base-utils.git",
-    "my-rn-common-resource": "git+https://gitlab.com/react-native-my-libs/my-rn-common-resource.git"
   },
   "peerDependencies": {}
 }
