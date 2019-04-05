@@ -62,7 +62,7 @@ export class VContainerLoad extends Component {
             return this._renderLoading();
         if (this.state.isError)
             return this._renderError();
-        if (this.props.contentContainerStyle)
+        if (this.props.contentContainerStyle && !this.props.skipContainerStyleIfHasChild)
             return <View style={this.props.contentContainerStyle}>{this.props.onRender()}</View>;
         else
             return this.props.onRender();

@@ -24,6 +24,8 @@ export interface VContainerLoadProps {
     isUsingInteraction?: boolean
     renderError?: () => ReactChild,
     renderLoading?: () => ReactChild,
+    /**nếu ko bị error, empty .., hàm onrender sẽ không áp dụng cái contentContainerStyle truyền từ props*/
+    skipContainerStyleIfHasChild?: boolean,
     contentContainerStyle?: StyleProp<ViewStyle>
 }
 
@@ -92,7 +94,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
         if (this.state.isError)
             return this._renderError();
 
-        if (this.props.contentContainerStyle)
+        if (this.props.contentContainerStyle && !this.props.skipContainerStyleIfHasChild)
             return <View style={this.props.contentContainerStyle}>{this.props.onRender()}</View>;
         else
             return this.props.onRender();

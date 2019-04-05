@@ -16,6 +16,8 @@ export interface VContainerLoadProps {
     isUsingInteraction?: boolean;
     renderError?: () => ReactChild;
     renderLoading?: () => ReactChild;
+    /**nếu ko bị error, empty .., hàm onrender sẽ không áp dụng cái contentContainerStyle truyền từ props*/
+    skipContainerStyleIfHasChild?: boolean;
     contentContainerStyle?: StyleProp<ViewStyle>;
 }
 /**Chỉ thay đổi khi prop: id hoặc hide thay đổi. Khi thay đổi sẽ loadDataAsync lại. nếu không muốn gọi forceUpdate*/
