@@ -48,7 +48,7 @@ export class FlatListLoad extends Component {
                 }
             }
             catch (e) {
-                sendError("_LoadStartAsync Error: " + e);
+                sendError(e);
                 if (this.props.id === this.id && this._isMounted) {
                     if (this.props.isUsingInteraction)
                         await CommonUtils.waitAfterInteractions();

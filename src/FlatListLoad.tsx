@@ -83,7 +83,7 @@ export class FlatListLoad extends Component<Props, State> {
                     });
                 }
             } catch (e) {
-                sendError("_LoadStartAsync Error: " + e);
+                sendError(e);
                 if (this.props.id === this.id && this._isMounted) {
                     if (this.props.isUsingInteraction) await CommonUtils.waitAfterInteractions();
                     this.setState((prevState: State) => {
