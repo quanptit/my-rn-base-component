@@ -23,9 +23,9 @@ interface Props {
     contentOffset?: { x: number, y: number } // {x: 0, y: 50}, Thường sử dụng để quảng cáo Banner không che nội dung
     horizontal?: boolean
     getItemLayout?: (data, index) => { length: number, offset: number, index: number }
-    contentInset?:Insets
+    contentInset?: Insets
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null
-    contentContainerStyle?:StyleProp<ViewStyle>
+    contentContainerStyle?: StyleProp<ViewStyle>
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }
 
@@ -125,7 +125,7 @@ export class FlatListLoad extends Component<Props, State> {
             scrollsToTop: false,
             scrollEventThrottle: 16,
             contentInset: this.props.contentInset,
-            ListFooterComponent:this.props.ListFooterComponent,
+            ListFooterComponent: this.props.ListFooterComponent,
             contentContainerStyle: this.props.contentContainerStyle,
             onScroll: this.props.onScroll
             // keyboardShouldPersistTaps: "always"
@@ -168,23 +168,20 @@ export class FlatListLoad extends Component<Props, State> {
         )
     }
 
-    /**
-     * showLoaddingBefore: show loading trước, sau đó mới show content load khi đã có data
-     * */
-    // getItemData(index) {
-    //     return this.listItems && this.listItems[index]
-    // }
-    //
-    // getListItems() {
-    //     return this.listItems
-    // }
-    //
-    // getItemCount() {
-    //     return this.listItems && this.listItems.length
-    // }
-
-
     //endregion
+
+    getItemCount(): number {
+        let listItems = this.state.listItems;
+        if (listItems == null) return 0;
+        return listItems.length;
+    }
+
+    getItemData(index: number) {
+        let listItems = this.state.listItems;
+        if (listItems == null || index >= listItems.length) return null;
+        return listItems[index]
+    }
+
     getListItems() {
         return this.state.listItems;
     }

@@ -53,9 +53,8 @@ export declare class FlatListLoad extends Component<Props, State> {
     private _renderError;
     private _renderLoading;
     private static _renderXbutton;
-    /**
-     * showLoaddingBefore: show loading trước, sau đó mới show content load khi đã có data
-     * */
+    getItemCount(): number;
+    getItemData(index: number): any;
     getListItems(): any[];
 }
 export {};

@@ -119,21 +119,19 @@ export class FlatListLoad extends Component {
                 {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
             </Button>);
     }
-    /**
-     * showLoaddingBefore: show loading trước, sau đó mới show content load khi đã có data
-     * */
-    // getItemData(index) {
-    //     return this.listItems && this.listItems[index]
-    // }
-    //
-    // getListItems() {
-    //     return this.listItems
-    // }
-    //
-    // getItemCount() {
-    //     return this.listItems && this.listItems.length
-    // }
     //endregion
+    getItemCount() {
+        let listItems = this.state.listItems;
+        if (listItems == null)
+            return 0;
+        return listItems.length;
+    }
+    getItemData(index) {
+        let listItems = this.state.listItems;
+        if (listItems == null || index >= listItems.length)
+            return null;
+        return listItems[index];
+    }
     getListItems() {
         return this.state.listItems;
     }

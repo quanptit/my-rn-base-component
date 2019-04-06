@@ -24,17 +24,6 @@ export class FlatListCustom extends Component {
         return (<FlatList ref={(ref) => { this.flatList = ref; }} {...this.props} extraData={this.state.extraData}/>);
     }
     //region utils
-    // getItemData(index) {
-    //     return this.listItems && this.listItems[index]
-    // }
-    //
-    // getListItems() {
-    //     return this.listItems
-    // }
-    //
-    // getItemCount() {
-    //     return this.listItems && this.listItems.length
-    // }
     // Note: Cannot scroll to locations outside the render window without specifying the getItemLayout prop.
     scrollToIndex(params) {
         let listItems = this.props.data;
