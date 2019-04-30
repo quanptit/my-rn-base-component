@@ -9,6 +9,7 @@ interface Props {
     placeholder?: string;
     returnKeyType?: ReturnKeyTypeOptions;
     multiline?: boolean;
+    autoFocus?: boolean;
 }
 interface State {
     text: string;
