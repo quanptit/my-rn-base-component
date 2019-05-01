@@ -14,7 +14,7 @@
   "license": "Quan Trinh Van",
   "nativePackage": true,
   "dependencies": {
-    "react-native-htmlview": "^0.13.0",
+    "react-native-htmlview": "git+https://gitlab.com/ReactNativeLib/react-native-htmlview.git",
     "react-native-vector-icons": "^5.0.0",
     "react-native-cached-image": "git+https://gitlab.com/ReactNativeLib/react-native-cached-image.git"
   },
