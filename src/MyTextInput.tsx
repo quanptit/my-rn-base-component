@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {ReturnKeyTypeOptions, StyleProp, StyleSheet, TextInput, TextInputProps, TextStyle, ViewStyle} from 'react-native'
 import {ComponentNoUpdate} from "./base/ComponentNoUpdate";
 
-interface Props {
+interface Props extends TextInputProps{
     style?: StyleProp<TextStyle>
     initialValue?: string
     editable?: boolean

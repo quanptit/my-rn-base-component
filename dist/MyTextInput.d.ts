@@ -1,7 +1,7 @@
 /// <reference types="react" />
-import { ReturnKeyTypeOptions, StyleProp, TextStyle } from 'react-native';
+import { ReturnKeyTypeOptions, StyleProp, TextInputProps, TextStyle } from 'react-native';
 import { ComponentNoUpdate } from "./base/ComponentNoUpdate";
-interface Props {
+interface Props extends TextInputProps {
     style?: StyleProp<TextStyle>;
     initialValue?: string;
     editable?: boolean;
