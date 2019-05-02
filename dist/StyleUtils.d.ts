@@ -1,0 +1,90 @@
+import { RegisteredStyle, TextStyle, ViewStyle } from 'react-native';
+/**
+ * const s = StyleUtils.getAllStyle();
+ * s.f_xsmal
+ * */
+export declare class StyleUtils {
+    private static allStyle;
+    private static FONT_XSMALL;
+    private static FONT_SMALL;
+    private static FONT_NOTMAL;
+    private static FONT_XNORMAL;
+    private static FONT_LARGE;
+    private static FONT_XLARGE;
+    static flatten(style: any): object;
+    static loadAllStyle(isAlwayLoadNew?: boolean): Promise<void>;
+    static getAllStyle(): {
+        [P in keyof IStyle]: RegisteredStyle<IStyle[P]>;
+    };
+    static getFontXSmall(): number;
+    static getFontSmall(): number;
+    static getFontNormal(): number;
+    static getFontXNormal(): number;
+    static getFontLarge(): number;
+    static getFontXLarge(): number;
+    private static createStyle;
+}
+export interface IStyle {
+    m_left_small: ViewStyle;
+    m_left_normal: ViewStyle;
+    m_right_small: ViewStyle;
+    m_right_normal: ViewStyle;
+    m_top_small: ViewStyle;
+    m_top_normal: ViewStyle;
+    m_bottom_small: ViewStyle;
+    m_bottom_normal: ViewStyle;
+    m_all_small: ViewStyle;
+    m_all_normal: ViewStyle;
+    m_hor_small: ViewStyle;
+    m_hor_normal: ViewStyle;
+    m_ver_small: ViewStyle;
+    m_ver_normal: ViewStyle;
+    p_left_small: ViewStyle;
+    p_left_normal: ViewStyle;
+    p_right_small: ViewStyle;
+    p_right_normal: ViewStyle;
+    p_top_small: ViewStyle;
+    p_top_normal: ViewStyle;
+    p_bottom_small: ViewStyle;
+    p_bottom_normal: ViewStyle;
+    p_all_small: ViewStyle;
+    p_all_normal: ViewStyle;
+    p_hor_small: ViewStyle;
+    p_hor_normal: ViewStyle;
+    p_ver_small: ViewStyle;
+    p_ver_normal: ViewStyle;
+    f_xsmal: TextStyle;
+    f_xsmal_b: TextStyle;
+    f_xsmal_i: TextStyle;
+    f_xsmal_i_b: TextStyle;
+    f_smal: TextStyle;
+    f_smal_b: TextStyle;
+    f_smal_i: TextStyle;
+    f_smal_i_b: TextStyle;
+    f_nor: TextStyle;
+    f_nor_b: TextStyle;
+    f_nor_i: TextStyle;
+    f_nor_i_b: TextStyle;
+    f_xnor: TextStyle;
+    f_xnor_b: TextStyle;
+    f_xnor_i: TextStyle;
+    f_xnor_i_b: TextStyle;
+    f_lar: TextStyle;
+    f_lar_b: TextStyle;
+    f_lar_i: TextStyle;
+    f_lar_i_b: TextStyle;
+    f_xlar: TextStyle;
+    f_xlar_b: TextStyle;
+    f_xlar_i: TextStyle;
+    f_xlar_i_b: TextStyle;
+    flex_i: ViewStyle;
+    flex_d_row: ViewStyle;
+    flex_d_col: ViewStyle;
+    flex_i_row: ViewStyle;
+    flex_i_column: ViewStyle;
+    absolute_fill: ViewStyle;
+    center_all: ViewStyle;
+    bg_white: ViewStyle;
+    black: TextStyle;
+    white: TextStyle;
+}
