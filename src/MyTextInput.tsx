@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {ReturnKeyTypeOptions, StyleProp, StyleSheet, TextInput, TextInputProps, TextStyle, ViewStyle} from 'react-native'
 import {ComponentNoUpdate} from "./base/ComponentNoUpdate";
+import {PureComponentSkipFunction} from "./base/PureComponentSkipFunction";
 
 interface Props extends TextInputProps{
     style?: StyleProp<TextStyle>
@@ -15,31 +16,25 @@ interface Props extends TextInputProps{
 
 interface State {
     text: string,
-    editable: boolean
 }
 
 /**Component không update, nếu muốn update => Tạo component với key khác*/
-export class MyTextInput extends ComponentNoUpdate<Props, State> {
-    static defaultProps = {
-        editable: true
-    };
-
+export class MyTextInput extends PureComponentSkipFunction<Props, State> {
     textInput: any;
 
     constructor(props) {
         super(props);
-        this.state = {text: this.props.initialValue, editable: this.props.editable};
+        this.state = {text: this.props.initialValue};
     }
 
     render() {
-        const {style, onChangeText, editable, ...restProps} = this.props;
+        const {style, onChangeText, ...restProps} = this.props;
         return (
             <TextInput ref={(ref) => {this.textInput = ref}}
                        style={[styles.inputContainer, style]}
                        {...restProps}
                        underlineColorAndroid="transparent"
                        value={this.state.text}
-                       editable={this.state.editable}
                        onChangeText={this.onChangeText.bind(this)}
             />
         )
@@ -64,10 +59,6 @@ export class MyTextInput extends ComponentNoUpdate<Props, State> {
 
     setText(text) {
         this.setState({text: text})
-    }
-
-    setEditable(editable: boolean) {
-        this.setState({editable: editable})
     }
 
     isFocused() {

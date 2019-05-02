@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {isEqual, isEqualWith, isFunction, isPlainObject} from "lodash";
 
-function isEqualSkipFunc(objSource, other) {
+function isEqualSkipFunc(objSource, other, deep = 0) {
+    if (deep > 3) return false;
+
     if (isPlainObject(objSource) && isPlainObject(other)) {
         for (let key in objSource) {
             if (objSource.hasOwnProperty(key) && typeof objSource[key] !== "function") {
-                if (!isEqualSkipFunc(objSource[key], other[key]))
+                if (!isEqualSkipFunc(objSource[key], other[key], deep + 1))
                     return false;
             }
         }

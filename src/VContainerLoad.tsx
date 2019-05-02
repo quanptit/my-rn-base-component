@@ -26,6 +26,8 @@ export interface VContainerLoadProps {
     renderLoading?: () => ReactChild,
     /**nếu ko bị error, empty .., hàm onrender sẽ không áp dụng cái contentContainerStyle truyền từ props*/
     skipContainerStyleIfHasChild?: boolean,
+    // Khi Id change => reRender nhưng không reload
+    skipReloadFromIdChange?: boolean
     contentContainerStyle?: StyleProp<ViewStyle>
 }
 
@@ -48,7 +50,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
     }
 
     async componentDidUpdate(prevProps: VContainerLoadProps, prevState, snapshot) {
-        if (prevProps.id !== this.props.id)
+        if (!this.props.skipReloadFromIdChange && prevProps.id !== this.props.id)
             await this.reload();
     }
 
