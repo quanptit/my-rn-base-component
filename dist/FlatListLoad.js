@@ -98,7 +98,7 @@ export class FlatListLoad extends Component {
     }
     //region utils
     _renderError() {
-        return (<View style={this.props.style}>
+        return (<View style={[this.props.contentContainerStyle, this.props.style]}>
                 {RenderUtils.renderErrorView(getStringsCommon().has_error, () => {
             // noinspection JSIgnoredPromiseFromCall
             this.notifyDataSetChanged(true);
@@ -107,7 +107,7 @@ export class FlatListLoad extends Component {
             </View>);
     }
     _renderLoading() {
-        return (<View style={this.props.style}>
+        return (<View style={[this.props.contentContainerStyle, this.props.style]}>
                 <Spinner style={{ marginTop: 60 }} size="large" color="gray"/>
             </View>);
     }

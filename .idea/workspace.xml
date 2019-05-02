@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="">
+    <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="first init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/MyTextInput.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MyTextInput.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/MyTextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MyTextInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/base/PureComponentSkipFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/base/PureComponentSkipFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VContainerLoad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/VContainerLoad.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/PureComponentSkipFunction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/PureComponentSkipFunction.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlatListLoad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlatListLoad.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyTextInput.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+            <state relative-caret-position="1568">
+              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -54,16 +49,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VContainerLoad.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+            <state relative-caret-position="366">
+              <caret line="106" column="60" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="60" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
                 <element signature="n#!!doc;n#skipContainerStyleIfHasChild#0;n#!!block;n#VContainerLoadProps#0" expanded="true" />
                 <element signature="n#!!doc;n#VContainerLoad#0" expanded="true" />
-                <element signature="e#3176#3200#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
+                <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
+                <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
               </folding>
             </state>
           </provider>
@@ -161,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/VContainer.tsx" />
         <option value="$PROJECT_DIR$/src/index.ts" />
         <option value="$PROJECT_DIR$/src/FlatListCustom.tsx" />
-        <option value="$PROJECT_DIR$/src/FlatListLoad.tsx" />
         <option value="$PROJECT_DIR$/src/HTMLView/htmlToElement.js" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -169,6 +177,7 @@
         <option value="$PROJECT_DIR$/src/MyTextInput.tsx" />
         <option value="$PROJECT_DIR$/src/base/PureComponentSkipFunction.tsx" />
         <option value="$PROJECT_DIR$/src/VContainerLoad.tsx" />
+        <option value="$PROJECT_DIR$/src/FlatListLoad.tsx" />
       </list>
     </option>
   </component>
@@ -223,6 +232,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,7 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,21 +391,8 @@
       <workItem from="1556689706273" duration="85000" />
       <workItem from="1556690843107" duration="5399000" />
       <workItem from="1556701627618" duration="777000" />
-      <workItem from="1556767262244" duration="562000" />
-    </task>
-    <task id="LOCAL-00007" summary="first init">
-      <created>1551152329800</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1551152329800</updated>
-    </task>
-    <task id="LOCAL-00008" summary="first init">
-      <created>1551162700302</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1551162700302</updated>
+      <workItem from="1556767262244" duration="1058000" />
+      <workItem from="1556802844367" duration="59000" />
     </task>
     <task id="LOCAL-00009" summary="first init">
       <created>1551163437418</created>
@@ -727,11 +723,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556694296567</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="first init">
+      <created>1556767883163</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1556767883163</updated>
+    </task>
+    <task id="LOCAL-00057" summary="first init">
+      <created>1556768115893</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1556768115893</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55699000" />
+    <option name="totallyTimeSpent" value="56254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1077,19 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2072">
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
-            <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
-            <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1166,6 +1163,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyTextInput.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1568">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1173,25 +1180,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTextInput.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VContainerLoad.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+        <state relative-caret-position="366">
+          <caret line="106" column="60" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="60" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
             <element signature="n#!!doc;n#skipContainerStyleIfHasChild#0;n#!!block;n#VContainerLoadProps#0" expanded="true" />
             <element signature="n#!!doc;n#VContainerLoad#0" expanded="true" />
-            <element signature="e#3176#3200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
+            <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
+            <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
           </folding>
         </state>
       </provider>
