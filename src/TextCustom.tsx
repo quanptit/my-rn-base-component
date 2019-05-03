@@ -45,7 +45,7 @@ export class TextCustom extends PureComponent<Props> {
                 </View>
             )
         }
-        return <Text ref={(ref) => { this.root = ref }} {...this.props}/>;
+        return this._renderAndroid();
     }
 
     private _renderAndroid() {

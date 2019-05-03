@@ -116,7 +116,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
         if (this.props.renderLoading) return this.props.renderLoading();
 
         return (
-            <View>
+            <View style={this.props.contentContainerStyle}>
                 <Spinner style={{marginTop: 60}} size="large" color="gray"/>
             </View>
         )

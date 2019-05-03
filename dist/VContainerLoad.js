@@ -79,7 +79,7 @@ export class VContainerLoad extends Component {
             return null;
         if (this.props.renderLoading)
             return this.props.renderLoading();
-        return (<View>
+        return (<View style={this.props.contentContainerStyle}>
                 <Spinner style={{ marginTop: 60 }} size="large" color="gray"/>
             </View>);
     }
