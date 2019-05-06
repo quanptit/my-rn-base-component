@@ -141,17 +141,23 @@ export default class OverflayContainer extends ComponentNoUpdate<Props, any> {
     }
 
     //region orientation =====
+    currentOrientation: any;
+
     _orientationDidChange(orientation) {
-        // if (orientation === 'LANDSCAPE') {
-        this.hideDialog()
-        // } else {
-        //     this.hideDialog();
-        // }
+        if (orientation != this.currentOrientation) {
+            this.currentOrientation = orientation;
+            this.hideDialog();
+        }
     }
 
     componentDidMount() {
+        try {
+            Orientation.getOrientation((error, orientation) => {
+                this.currentOrientation = orientation;
+            });
+        } catch (e) { console.log("Orientation.getOrientation()")}
         this.listenner = this._orientationDidChange.bind(this);
-        Orientation.addOrientationListener(this.listenner)
+        Orientation.addOrientationListener(this.listenner);
     }
 
     componentWillUnmount() {

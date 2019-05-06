@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/TextCustom.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/TextCustom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/VContainerLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/VContainerLoad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextCustom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextCustom.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VContainerLoad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/VContainerLoad.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,16 +49,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VContainerLoad.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="562">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
                 <element signature="n#!!doc;n#skipContainerStyleIfHasChild#0;n#!!block;n#VContainerLoadProps#0" expanded="true" />
                 <element signature="n#!!doc;n#VContainerLoad#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+              <folding>
+                <element signature="e#14#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TextCustom.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -85,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Button.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
+            <state relative-caret-position="4872">
               <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
@@ -178,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/Button.tsx" />
         <option value="$PROJECT_DIR$/src/utils/RenderUtils.tsx" />
         <option value="$PROJECT_DIR$/src/HorizontalProgressBar.tsx" />
-        <option value="$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx" />
         <option value="$PROJECT_DIR$/src/CheckBox.tsx" />
         <option value="$PROJECT_DIR$/src/WebViewCustom.tsx" />
         <option value="$PROJECT_DIR$/../my-rn-webview/src/WebViewCustom.tsx" />
@@ -194,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/FlatListLoad.tsx" />
         <option value="$PROJECT_DIR$/src/TextCustom.tsx" />
         <option value="$PROJECT_DIR$/src/VContainerLoad.tsx" />
+        <option value="$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx" />
       </list>
     </option>
   </component>
@@ -404,14 +421,8 @@
       <workItem from="1556767262244" duration="1058000" />
       <workItem from="1556802844367" duration="89000" />
       <workItem from="1556816048567" duration="59000" />
-      <workItem from="1556909564280" duration="541000" />
-    </task>
-    <task id="LOCAL-00010" summary="first init">
-      <created>1551164216880</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1551164216880</updated>
+      <workItem from="1556909564280" duration="658000" />
+      <workItem from="1557166816673" duration="194000" />
     </task>
     <task id="LOCAL-00011" summary="first init">
       <created>1551164237347</created>
@@ -749,14 +760,22 @@
       <option name="project" value="LOCAL" />
       <updated>1556802919783</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="first init">
+      <created>1556910109725</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1556910109725</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56884000" />
+    <option name="totallyTimeSpent" value="57195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972299" visible="true" weight="0.13277134" />
       <window_info id="Structure" order="1" sideWeight="0.50277007" side_tool="true" weight="0.13277134" />
@@ -989,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CheckBox.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1180,6 +1189,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4872">
+          <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1189,29 +1208,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TextCustom.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Button.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="504">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VContainerLoad.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="562">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
             <element signature="n#!!doc;n#skipContainerStyleIfHasChild#0;n#!!block;n#VContainerLoadProps#0" expanded="true" />
             <element signature="n#!!doc;n#VContainerLoad#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+          <folding>
+            <element signature="e#14#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -25,6 +25,7 @@ export default class OverflayContainer extends ComponentNoUpdate<Props, any> {
     render(): JSX.Element;
     _renderOverComponent(): JSX.Element;
     _renderPopup(): JSX.Element;
+    currentOrientation: any;
     _orientationDidChange(orientation: any): void;
     componentDidMount(): void;
     componentWillUnmount(): void;
