@@ -1,3 +1,4 @@
+export { default as Overlay } from "./dialogs/popupDialog/components/Overlay";
 export { ContainerScreen } from "./ContainerScreen";
 export { CheckBox } from "./CheckBox";
 export { ComboBox } from "./ComboBox";
