@@ -1,3 +1,4 @@
+export { BaseLoading } from "./base/BaseLoading";
 export { default as Overlay } from "./dialogs/popupDialog/components/Overlay";
 export { ContainerScreen } from "./ContainerScreen";
 export { CheckBox } from "./CheckBox";

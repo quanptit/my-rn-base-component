@@ -1,5 +1,12 @@
 import React, { PureComponent } from 'react';
 import { View } from "react-native";
+/*
+<HorizontalProgressBar style={{flex: 1, marginHorizontal: 6, height: 6}}
+                                           paddingBackground={0}
+                                           unfillStyle={{backgroundColor: Colors.accentColor, borderRadius: 2}}
+                                           fillStyle={{backgroundColor: Colors.primaryColor, borderRadius: 2}}
+                                           progress={this.state.noCorrect / this.state.noTotal}/>
+* */
 export class HorizontalProgressBar extends PureComponent {
     //endregion
     constructor(props) {
