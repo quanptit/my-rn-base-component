@@ -25,6 +25,7 @@ export interface VContainerLoadProps {
 export declare abstract class VContainerLoad extends Component<VContainerLoadProps, State> {
     static defaultProps: {
         isUsingInteraction: boolean;
+        skipContainerStyleIfHasChild: boolean;
     };
     private id;
     private _isMounted;

@@ -91,6 +91,7 @@ export class VContainerLoad extends Component {
 }
 VContainerLoad.defaultProps = {
     isUsingInteraction: true,
+    skipContainerStyleIfHasChild: true,
 };
 const styles = StyleSheet.create({
     xButton: {
