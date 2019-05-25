@@ -106,7 +106,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
     protected _renderError() {
         let showCloseButtonWhenError = this.props.showCloseButtonWhenError;
         return <View style={this.props.contentContainerStyle}>
-            {RenderUtils.renderErrorView(getStringsCommon().has_error, this.reload.bind(this),
+            {RenderUtils.renderErrorView(getStringsCommon().has_error, () => this.reload(),
                 showCloseButtonWhenError ? 30 : 0)}
             {showCloseButtonWhenError && this._renderXbutton()}
         </View>
