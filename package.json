@@ -15,8 +15,7 @@
   "nativePackage": true,
   "dependencies": {
     "react-native-htmlview": "git+https://gitlab.com/ReactNativeLib/react-native-htmlview.git",
-    "react-native-vector-icons": "^5.0.0",
-    "react-native-cached-image": "git+https://gitlab.com/ReactNativeLib/react-native-cached-image.git"
+    "react-native-vector-icons": "^5.0.0"
   },
   "devDependencies": {
   },
