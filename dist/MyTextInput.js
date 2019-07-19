@@ -58,7 +58,7 @@ export class MyTextInput extends PureComponentSkipFunction {
 }
 const styles = StyleSheet.create({
     inputContainer: {
-        height: 38, color: "black", fontSize: 16, marginHorizontal: 8, paddingHorizontal: 12,
+        height: 38, color: "black", fontSize: 16, paddingHorizontal: 12,
         borderWidth: 1, borderRadius: 5, borderColor: "#CCC", paddingTop: 0, paddingBottom: 0
     }
 });

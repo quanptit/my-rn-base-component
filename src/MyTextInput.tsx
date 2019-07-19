@@ -3,7 +3,7 @@ import {ReturnKeyTypeOptions, StyleProp, StyleSheet, TextInput, TextInputProps, 
 import {ComponentNoUpdate} from "./base/ComponentNoUpdate";
 import {PureComponentSkipFunction} from "./base/PureComponentSkipFunction";
 
-interface Props extends TextInputProps{
+interface Props extends TextInputProps {
     style?: StyleProp<TextStyle>
     initialValue?: string
     editable?: boolean
@@ -130,7 +130,7 @@ export class MyTextInput extends PureComponentSkipFunction<Props, State> {
 
 const styles = StyleSheet.create({
     inputContainer: {
-        height: 38, color: "black", fontSize: 16, marginHorizontal: 8, paddingHorizontal: 12,
+        height: 38, color: "black", fontSize: 16, paddingHorizontal: 12,
         borderWidth: 1, borderRadius: 5, borderColor: "#CCC", paddingTop: 0, paddingBottom: 0
     }
 });
