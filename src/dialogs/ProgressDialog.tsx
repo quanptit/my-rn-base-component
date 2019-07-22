@@ -36,6 +36,7 @@ export default class ProgressDialog extends Component<Props> {
         return (
             <PopupDialog
                 dismissOnTouchOutside={this.props.cancelable}
+                dismissOnHardwareBackPress={this.props.cancelable}
                 width={"85%"} show={true}
                 ref={(popupDialog) => { this.popupDialog = popupDialog }}
                 dialogStyle={{backgroundColor: "transparent"}}>

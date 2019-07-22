@@ -26,7 +26,9 @@ export default class CommonDialog extends Component<Props> {
         return (
             <PopupDialog
                 style={this.props.style}
-                dismissOnTouchOutside={this.props.dismissOnTouchOutside} width={width}
+                dismissOnTouchOutside={this.props.dismissOnTouchOutside}
+                dismissOnHardwareBackPress={this.props.dismissOnTouchOutside}
+                width={width}
                 ref={(popupDialog) => { this.popupDialog = popupDialog }}>
                 <View style={{margin: 16}}>
                     {this._renderTitle()}

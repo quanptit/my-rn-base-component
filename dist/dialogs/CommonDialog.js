@@ -10,7 +10,7 @@ export default class CommonDialog extends Component {
         width = 0.85 * width;
         if (width > 400)
             width = 400;
-        return (<PopupDialog style={this.props.style} dismissOnTouchOutside={this.props.dismissOnTouchOutside} width={width} ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
+        return (<PopupDialog style={this.props.style} dismissOnTouchOutside={this.props.dismissOnTouchOutside} dismissOnHardwareBackPress={this.props.dismissOnTouchOutside} width={width} ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
                 <View style={{ margin: 16 }}>
                     {this._renderTitle()}
                     {this._renderMessage()}
