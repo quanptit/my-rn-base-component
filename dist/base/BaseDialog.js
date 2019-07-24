@@ -11,8 +11,12 @@ export class BaseDialog extends PureComponent {
     getHeight() {
         return undefined;
     }
+    isCancelable() {
+        return true;
+    }
     render() {
-        return (<PopupDialog {...this.props} width={this.getWidth()} height={this.getHeight()} ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
+        let isCancelable = this.isCancelable();
+        return (<PopupDialog {...this.props} dismissOnTouchOutside={isCancelable} dismissOnHardwareBackPress={isCancelable} width={this.getWidth()} height={this.getHeight()} ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
                 {this.renderContent()}
             </PopupDialog>);
     }

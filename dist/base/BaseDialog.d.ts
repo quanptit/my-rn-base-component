@@ -1,19 +1,17 @@
 import { PureComponent, ReactChild } from 'react';
 import PopupDialog from "../dialogs/popupDialog/PopupDialog";
-import { PopupDialogType } from "../dialogs/popupDialog/Type";
 /**
  * Sử dụng cho các dialog.
  public static showDialog(props?: Props) {
         DialogUtils.showDialog(<DialogPaymentChoose {...props}/>)
      }
  * */
-export declare abstract class BaseDialog<P extends PopupDialogType = {
-    children: null;
-}, S = {}> extends PureComponent<P, S> {
+export declare abstract class BaseDialog<P = {}, S = {}> extends PureComponent<P, S> {
     protected popupDialog: PopupDialog;
     protected abstract getWidth(): number | string;
     protected abstract renderContent(): ReactChild;
     protected getHeight(): number | string;
+    protected isCancelable(): boolean;
     render(): JSX.Element;
     show(onShowed?: any): void;
     dismiss(onDismissed?: any): void;
