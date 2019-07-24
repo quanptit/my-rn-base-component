@@ -1,5 +1,6 @@
 import React, {Component, PureComponent, ReactChild} from 'react'
 import PopupDialog from "../dialogs/popupDialog/PopupDialog";
+import {PopupDialogType} from "../dialogs/popupDialog/Type";
 
 /**
  * Sử dụng cho các dialog.
@@ -7,7 +8,7 @@ import PopupDialog from "../dialogs/popupDialog/PopupDialog";
         DialogUtils.showDialog(<DialogPaymentChoose {...props}/>)
      }
  * */
-export abstract class BaseDialog<P = {}, S = {}> extends PureComponent<P, S> {
+export abstract class BaseDialog<P extends PopupDialogType = {children: null}, S = {}> extends PureComponent<P, S> {
     protected popupDialog: PopupDialog;
 
     // The Width of Dialog, you can use fixed height or use percentage: ex: 300, '85%'
