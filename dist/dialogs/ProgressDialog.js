@@ -16,7 +16,7 @@ export default class ProgressDialog extends Component {
         this._isMounted && this.popupDialog.dismiss();
     }
     render() {
-        return (<PopupDialog dismissOnTouchOutside={this.props.cancelable} dismissOnHardwareBackPress={this.props.cancelable} width={"85%"} show={true} ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
+        return (<PopupDialog dismissOnTouchOutside={this.props.cancelable} dismissOnHardwareBackPress={this.props.cancelable} width={"85%"} show={true} ref={(popupDialog) => { this.popupDialog = popupDialog; }} dialogStyle={{ backgroundColor: "transparent" }}>
                 <Spinner style={{ alignSelf: "center" }} size="large" color="white"/>
                 {this.props.message != undefined && <TextCustom value={this.props.message} style={{ color: "white", textAlign: "center", marginTop: 8 }}/>}
             </PopupDialog>);
