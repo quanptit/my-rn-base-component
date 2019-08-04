@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="197">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -58,13 +58,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+            <state relative-caret-position="413">
+              <caret line="155" column="46" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
                 <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
                 <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
-                <element signature="e#5519#5533#0" expanded="true" />
                 <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
               </folding>
             </state>
@@ -1220,16 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react-native/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1237,15 +1226,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+        <state relative-caret-position="413">
+          <caret line="155" column="46" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
             <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
             <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
-            <element signature="e#5519#5533#0" expanded="true" />
             <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
           </folding>
         </state>

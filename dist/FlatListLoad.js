@@ -108,6 +108,8 @@ export class FlatListLoad extends Component {
             </View>);
     }
     _renderLoading() {
+        if (this.props.renderLoading)
+            return this.props.renderLoading();
         return (<View style={[this.props.contentContainerStyle, this.props.style]}>
                 <Spinner style={{ marginTop: 60 }} size="large" color="gray"/>
             </View>);

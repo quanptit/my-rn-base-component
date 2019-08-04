@@ -9,6 +9,7 @@ import {RenderUtils} from "./utils/RenderUtils";
 
 interface Props {
     id?: number | string
+    renderLoading?: () => React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null
     loadDataAsync: () => Promise<any[]> // return array. Sau khi load sẽ sử dụng dữ liệu của cái này thay vì default
     renderItem: ListRenderItem<any>
     defaultData?: any[]
@@ -151,6 +152,9 @@ export class FlatListLoad extends Component<Props, State> {
     }
 
     private _renderLoading() {
+        if (this.props.renderLoading)
+            return this.props.renderLoading();
+
         return (
             <View style={[this.props.contentContainerStyle, this.props.style]}>
                 <Spinner style={{marginTop: 60}} size="large" color="gray"/>

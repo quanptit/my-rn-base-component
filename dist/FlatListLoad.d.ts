@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, StyleProp, ViewStyle } from 'react-native';
 interface Props {
     id?: number | string;
+    renderLoading?: () => React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
     loadDataAsync: () => Promise<any[]>;
     renderItem: ListRenderItem<any>;
     defaultData?: any[];
@@ -50,7 +51,7 @@ export declare class FlatListLoad extends Component<Props, State> {
     /**như hàm notifyDataSetChanged của android, ko gây loading lại từ đầu listView*/
     notifyDataSetChanged(isReloadData: boolean): Promise<void>;
     shouldComponentUpdate(nextProps: any, nextState: any): boolean;
-    render(): JSX.Element;
+    render(): React.ComponentClass<any, any> | JSX.Element | (() => React.ReactElement<any, string | ((props: any) => React.ReactElement<any, string | any | (new (props: any) => React.Component<any, any, any>)>) | (new (props: any) => React.Component<any, any, any>)>);
     private _renderError;
     private _renderLoading;
     private static _renderXbutton;
