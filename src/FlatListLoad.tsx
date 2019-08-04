@@ -25,6 +25,7 @@ interface Props {
     getItemLayout?: (data, index) => { length: number, offset: number, index: number }
     contentInset?: Insets
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null
+    ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
     contentContainerStyle?: StyleProp<ViewStyle>
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }
@@ -126,6 +127,7 @@ export class FlatListLoad extends Component<Props, State> {
             scrollEventThrottle: 16,
             contentInset: this.props.contentInset,
             ListFooterComponent: this.props.ListFooterComponent,
+            ListEmptyComponent: this.props.ListEmptyComponent,
             contentContainerStyle: this.props.contentContainerStyle,
             onScroll: this.props.onScroll
             // keyboardShouldPersistTaps: "always"

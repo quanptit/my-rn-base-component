@@ -90,6 +90,7 @@ export class FlatListLoad extends Component {
             scrollEventThrottle: 16,
             contentInset: this.props.contentInset,
             ListFooterComponent: this.props.ListFooterComponent,
+            ListEmptyComponent: this.props.ListEmptyComponent,
             contentContainerStyle: this.props.contentContainerStyle,
             onScroll: this.props.onScroll
             // keyboardShouldPersistTaps: "always"

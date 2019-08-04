@@ -25,6 +25,7 @@ interface Props {
     };
     contentInset?: Insets;
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
+    ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
     contentContainerStyle?: StyleProp<ViewStyle>;
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }

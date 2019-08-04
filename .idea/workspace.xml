@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlatListLoad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlatListLoad.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base/BaseDialog.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="504">
               <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
@@ -43,13 +43,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="253">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
+                <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
+                <element signature="e#5519#5533#0" expanded="true" />
+                <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
               </folding>
             </state>
           </provider>
@@ -158,7 +174,6 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/HTMLView.tsx" />
         <option value="$PROJECT_DIR$/src/base/PureComponentSkipFunction.tsx" />
-        <option value="$PROJECT_DIR$/src/FlatListLoad.tsx" />
         <option value="$PROJECT_DIR$/src/TextCustom.tsx" />
         <option value="$PROJECT_DIR$/src/dialogs/OverflayContainer.tsx" />
         <option value="$PROJECT_DIR$/src/ContainerScreen.tsx" />
@@ -172,6 +187,7 @@
         <option value="$PROJECT_DIR$/src/dialogs/CommonDialog.tsx" />
         <option value="$PROJECT_DIR$/src/base/BaseDialog.tsx" />
         <option value="$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx" />
+        <option value="$PROJECT_DIR$/src/FlatListLoad.tsx" />
       </list>
     </option>
   </component>
@@ -226,6 +242,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +271,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -815,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/react-native/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="1988" column="17" selection-start-line="1988" selection-start-column="17" selection-end-line="1988" selection-end-column="17" />
-          <folding>
-            <element signature="e#55122#55984#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/VContainerLoad.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1028,19 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4032">
-          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
-            <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
-            <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Button.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4872">
@@ -1197,6 +1190,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/BaseDialog.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+            <element signature="n#!!doc;n#BaseDialog#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dialogs/popupDialog/Type.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1216,23 +1220,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/base/BaseDialog.tsx">
+    <entry file="file://$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="253">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding>
-            <element signature="e#0#65#0" expanded="true" />
-            <element signature="n#!!doc;n#BaseDialog#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react-native/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="280">
+          <caret line="3955" column="78" lean-forward="true" selection-start-line="3955" selection-start-column="4" selection-end-line="3955" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
+            <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
+            <element signature="e#5519#5533#0" expanded="true" />
+            <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
           </folding>
         </state>
       </provider>
