@@ -92,7 +92,8 @@ export class FlatListLoad extends Component {
             ListFooterComponent: this.props.ListFooterComponent,
             ListEmptyComponent: this.props.ListEmptyComponent,
             contentContainerStyle: this.props.contentContainerStyle,
-            onScroll: this.props.onScroll
+            onScroll: this.props.onScroll,
+            showsHorizontalScrollIndicator: this.props.showsHorizontalScrollIndicator
             // keyboardShouldPersistTaps: "always"
         };
         return (<FlatList ref={(ref) => { this.flatList = ref; }} {...props}/>);

@@ -29,6 +29,7 @@ interface Props {
     ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
     contentContainerStyle?: StyleProp<ViewStyle>;
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
+    showsHorizontalScrollIndicator?: boolean;
 }
 interface State {
     extraData: number;

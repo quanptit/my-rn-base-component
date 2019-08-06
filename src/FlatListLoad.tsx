@@ -29,6 +29,7 @@ interface Props {
     ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
     contentContainerStyle?: StyleProp<ViewStyle>
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
+    showsHorizontalScrollIndicator?:boolean
 }
 
 interface State {
@@ -130,7 +131,8 @@ export class FlatListLoad extends Component<Props, State> {
             ListFooterComponent: this.props.ListFooterComponent,
             ListEmptyComponent: this.props.ListEmptyComponent,
             contentContainerStyle: this.props.contentContainerStyle,
-            onScroll: this.props.onScroll
+            onScroll: this.props.onScroll,
+            showsHorizontalScrollIndicator: this.props.showsHorizontalScrollIndicator
             // keyboardShouldPersistTaps: "always"
         };
         return (
