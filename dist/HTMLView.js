@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View } from 'react-native';
-import HTMLViewLib from 'react-native-htmlview';
+import HTMLViewLib from 'my-rn-htmlview';
 import { StyleUtils } from "./StyleUtils";
 const fontNormal = StyleUtils.getFontNormal();
 const BODY_TAG_PATTERN = /\<\/ *body\>/;

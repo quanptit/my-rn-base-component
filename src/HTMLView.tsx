@@ -1,6 +1,6 @@
 import React, {Component, PureComponent} from 'react'
 import {StyleSheet, StyleProp, ViewStyle, View} from 'react-native'
-import HTMLViewLib from 'react-native-htmlview'
+import HTMLViewLib from 'my-rn-htmlview'
 import {StyleUtils} from "./StyleUtils";
 
 const fontNormal: any = StyleUtils.getFontNormal();

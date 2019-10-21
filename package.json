@@ -5,20 +5,23 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "install_npm": "yarn install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ads"
+    "react-native"
   ],
   "author": "Quan Trinh Van",
-  "license": "Quan Trinh Van",
-  "nativePackage": true,
+  "license": "ISC",
+  "homepage": "https://github.com/quanptit/my-rn-base-component",
+  "bugs": "https://github.com/quanptit/my-rn-base-component/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quanptit/my-rn-base-component.git"
+  },
+  "nativePackage": false,
   "dependencies": {
-  },
-  "devDependencies": {
-  },
-  "peerDependencies": {
-    "react-native-htmlview": "git+https://gitlab.com/ReactNativeLib/react-native-htmlview.git",
+    "my-rn-htmlview": "^0.15.0",
     "react-native-vector-icons": "^5.0.0"
   }
 }
