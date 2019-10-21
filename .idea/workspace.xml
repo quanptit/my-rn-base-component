@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="update">
+    <list default="true" id="39767e11-7543-4f16-ba12-0eab2640477a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/CheckBox.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/CheckBox.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ComboBox.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ComboBox.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ContainerScreen.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ContainerScreen.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/FlatListLoad.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/FlatListLoad.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/HTMLView.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/HTMLView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/MyTextInput.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MyTextInput.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Spinner.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Spinner.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/VContainer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/VContainer.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/VContainerLoad.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/VContainerLoad.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/base/BaseLoading.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/base/BaseLoading.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/utils/RenderUtils.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/utils/RenderUtils.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,20 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StyleUtils.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#90#0" expanded="true" />
-                <element signature="e#2502#2529#0" expanded="true" />
-                <element signature="e#6103#6130#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base/BaseDialog.tsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
+            <state relative-caret-position="217">
               <caret line="179" selection-start-line="179" selection-end-line="179" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -83,20 +56,53 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Button.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="280">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HTMLView.tsx">
+        <entry file="file://$PROJECT_DIR$/src/Touchable.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Col.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/RenderUtils.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -155,6 +161,7 @@
       <find>defaultValue</find>
       <find>waitAfterInteractions</find>
       <find>react-native-htmlview</find>
+      <find>react-native-cached-image</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -195,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/StyleUtils.ts" />
         <option value="$PROJECT_DIR$/src/ComboBox.tsx" />
         <option value="$PROJECT_DIR$/src/Button.tsx" />
-        <option value="$PROJECT_DIR$/src/utils/RenderUtils.tsx" />
         <option value="$PROJECT_DIR$/src/CheckBox.tsx" />
         <option value="$PROJECT_DIR$/src/WebViewCustom.tsx" />
         <option value="$PROJECT_DIR$/../my-rn-webview/src/WebViewCustom.tsx" />
@@ -218,6 +224,7 @@
         <option value="$PROJECT_DIR$/src/dialogs/ProgressDialog.tsx" />
         <option value="$PROJECT_DIR$/src/FlatListLoad.tsx" />
         <option value="$PROJECT_DIR$/src/HTMLView.tsx" />
+        <option value="$PROJECT_DIR$/src/utils/RenderUtils.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -831,16 +838,16 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32887974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32887974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.27954778" />
+      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.17368962" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.18088387" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.18088387" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -857,16 +864,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ComboBox.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3948">
-          <caret line="141" column="32" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/VContainerLoad.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -881,16 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Col.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -982,16 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/RenderUtils.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/my-rn-base-utils/dist/CommonUtils.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -1056,16 +1033,6 @@
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Button.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4872">
-          <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1256,19 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
-            <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
-            <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native-htmlview/HTMLView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1176">
@@ -1285,10 +1239,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlatListLoad.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="n#!!doc;n#FlatListLoad#0" expanded="true" />
+            <element signature="n#!!doc;n#notifyDataSetChanged#0;n#FlatListLoad#0" expanded="true" />
+            <element signature="n#!!block;n#_renderXbutton#0;n#FlatListLoad#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Touchable.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Col.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/RenderUtils.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="56">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
