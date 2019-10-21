@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { CachedImage } from 'react-native-cached-image';
+import { CachedImage } from 'my-rn-cached-image';
 import { Touchable } from "../Touchable";
 export class RenderUtils {
     static renderIcon(name, fontSize, color, style) {
