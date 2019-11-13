@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "install_npm": "yarn install",
+    "link": "yarn link @types/react @types/react-native @types/lodash react react-native lodash my-rn-base-component my-rn-base-utils my-rn-common-resource",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

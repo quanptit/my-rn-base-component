@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { CachedImage } from 'my-rn-cached-image';
@@ -12,7 +12,7 @@ export class RenderUtils {
         return (<MaterialIcons name={name} style={[{ color: color, fontSize: fontSize }, style]}/>);
     }
     static renderSeparate(style, key) {
-        return <View key={key} style={[{ height: 1, backgroundColor: "#CCCCCCAA" }, style]}/>;
+        return <View key={key} style={[{ height: 1, backgroundColor: Platform.OS === "ios" ? "#CCCCCC" : "#CCCCCCAA" }, style]}/>;
     }
     static renderImage(url, style, props) {
         return <CachedImage {...props} source={{ uri: url }} defaultSource={require("../../assets/placeholder.jpg")} style={style}/>;
