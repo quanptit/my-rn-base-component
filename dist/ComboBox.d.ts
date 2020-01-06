@@ -1,13 +1,13 @@
 /// <reference types="react" />
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { TextStyle, ViewStyle } from 'react-native';
 import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
 interface Props {
     listData: string[];
     indexSelected: number;
     selectedChange: (indexSelected: number) => void;
-    textStyle?: StyleProp<TextStyle>;
-    textSelectedStyle?: StyleProp<TextStyle>;
-    style?: StyleProp<ViewStyle>;
+    textStyle?: TextStyle;
+    textSelectedStyle?: TextStyle;
+    style?: ViewStyle;
 }
 export declare class ComboBox extends PureComponentSkipFunction<Props> {
     static defaultProps: {

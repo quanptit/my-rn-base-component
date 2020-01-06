@@ -5,9 +5,9 @@ import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
 import { Col } from "./Col";
 import { Row } from "./Row";
 import { StyleUtils } from "./StyleUtils";
-import { RenderUtils } from "./utils/RenderUtils";
 import { isEmpty } from "my-rn-base-utils";
 import { DialogUtils } from "./dialogs/DialogUtils";
+import { IconArrowDropDown } from "./common-icons/IconArrowDropDown";
 const s = StyleUtils.getAllStyle();
 const heightItem = 40;
 const styles = StyleSheet.create({
@@ -55,7 +55,7 @@ export class ComboBox extends PureComponentSkipFunction {
         let currentValue = indexSelected >= 0 ? this.props.listData[indexSelected] : null;
         return (<Row ref={(ref) => { this.root = ref; }} dial={4} enablemeasureInWindow onPress={this.showListItem.bind(this)} style={[styles.container, styles.paddingItem, this.props.style]}>
                 <TextCustom value={currentValue} style={[s.flex_i, this.props.textSelectedStyle]}/>
-                {RenderUtils.renderIcon("md-arrow-dropdown", 25, "#666666")}
+                <IconArrowDropDown fontSize={26} color="#666666"/>
             </Row>);
     }
     showListItem() {

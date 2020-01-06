@@ -1,9 +1,9 @@
 import { PureComponent } from 'react';
-import { StyleProp, ViewStyle } from "react-native";
+import { ViewStyle } from "react-native";
 interface Props {
-    style?: StyleProp<ViewStyle>;
-    fillStyle?: StyleProp<ViewStyle>;
-    unfillStyle?: StyleProp<ViewStyle>;
+    style?: ViewStyle;
+    fillStyle?: ViewStyle;
+    unfillStyle?: ViewStyle;
     /**in range: [0 - 1]*/
     progress: number;
     paddingBackground?: number;

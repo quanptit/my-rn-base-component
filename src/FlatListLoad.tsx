@@ -6,6 +6,7 @@ import {getStringsCommon} from "my-rn-common-resource";
 import {CommonUtils, isEmpty, isIOS, sendError} from "my-rn-base-utils";
 import {isEqual} from "lodash";
 import {RenderUtils} from "./utils/RenderUtils";
+import {IconClose} from "./common-icons/IconClose";
 
 interface Props {
     id?: number | string
@@ -13,7 +14,7 @@ interface Props {
     loadDataAsync: () => Promise<any[]> // return array. Sau khi load sẽ sử dụng dữ liệu của cái này thay vì default
     renderItem: ListRenderItem<any>
     defaultData?: any[]
-    style?: StyleProp<ViewStyle>
+    style?: ViewStyle
     isUsingInteraction?: boolean
     keyboardShouldPersistTaps?: boolean | "always" | "never" | "handled";
     ItemSeparatorComponent?: React.ComponentType<any> | (() => React.ReactElement<any>) | null;
@@ -27,7 +28,7 @@ interface Props {
     contentInset?: Insets
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null
     ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
-    contentContainerStyle?: StyleProp<ViewStyle>
+    contentContainerStyle?: ViewStyle
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
     showsHorizontalScrollIndicator?:boolean
 }
@@ -171,7 +172,7 @@ export class FlatListLoad extends Component<Props, State> {
                         width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
                         top: isIOS() ? 12 : 5
                     }}>
-                {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
+                <IconClose fontSize={33} color="#cc1a00"/>
             </Button>
         )
     }

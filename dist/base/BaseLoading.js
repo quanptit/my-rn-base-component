@@ -6,23 +6,24 @@ import { getStringsCommon } from "my-rn-common-resource";
 import { RenderUtils } from '../utils/RenderUtils';
 import Spinner from '../Spinner';
 import { Button, ButtonModel } from '../Button';
+import { IconClose } from "../common-icons/IconClose";
 /*
 - Có thể gọi setState trong hàm onLoadStartAsync
 - Chỉ update State change
 - Không sử dụng VContainerLoad vì khi muốn setState cho chính component này
 * */
 export class BaseLoading extends Component {
-    constructor(props) {
-        super(props);
-        let obj = this.getInittialState();
-        obj.isLoading = true;
-        this.state = obj;
-    }
     isShowProgressLoading() {
         return false;
     }
     isShowCloseButtonWhenError() {
         return false;
+    }
+    constructor(props) {
+        super(props);
+        let obj = this.getInittialState();
+        obj.isLoading = true;
+        this.state = obj;
     }
     shouldComponentUpdate(nextProps, nextState) {
         return !isEqual(this.state, nextState);
@@ -71,7 +72,7 @@ export class BaseLoading extends Component {
             width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
             top: isIOS() ? 12 : 5
         }}>
-                {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
+                <IconClose fontSize={33} color="#cc1a00"/>
             </Button>);
     }
 }

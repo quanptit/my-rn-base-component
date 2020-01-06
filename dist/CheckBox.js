@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { Touchable } from './Touchable';
 import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
-import { RenderUtils } from "./utils/RenderUtils";
+import { IconRadioButtonOn } from "./common-icons/IconRadioButtonOn";
+import { IconRadioButtonOff } from "./common-icons/IconRadioButtonOff";
+import { IconCheckboxCheck } from "./common-icons/IconCheckboxCheck";
+import { IconCheckboxUncheck } from "./common-icons/IconCheckboxUncheck";
 // UnCotroler component
 export class CheckBox extends PureComponentSkipFunction {
     _renderLeft() {
@@ -35,12 +37,12 @@ export class CheckBox extends PureComponentSkipFunction {
     genCheckedImage() {
         if (this.props.radio) {
             return this.props.isChecked
-                ? <Icon name='ios-radio-button-on' style={[styles.icon, this.props.iconStyle]}/>
-                : <Icon name='ios-radio-button-off' style={[styles.icon, this.props.iconStyle]}/>;
+                ? <IconRadioButtonOn fontSize={23} color="black" style={this.props.iconStyle}/>
+                : <IconRadioButtonOff fontSize={23} color="black" style={this.props.iconStyle}/>;
         }
         return this.props.isChecked
-            ? RenderUtils.renderMaterialIcon("check-box", undefined, undefined, [styles.icon, this.props.iconStyle])
-            : RenderUtils.renderMaterialIcon("check-box-outline-blank", undefined, undefined, [styles.icon, this.props.iconStyle]);
+            ? <IconCheckboxCheck fontSize={23} color="black" style={this.props.iconStyle}/>
+            : <IconCheckboxUncheck fontSize={23} color="black" style={this.props.iconStyle}/>;
     }
     async onClick() {
         if (this.props.isReadOnly) {
@@ -59,7 +61,7 @@ export class CheckBox extends PureComponentSkipFunction {
 }
 const styles = StyleSheet.create({
     icon: {
-        fontSize: 23, color: "black"
+        color: "black", width: 23, height: 23
     },
     container: {
         flexDirection: 'row',

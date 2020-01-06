@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, StyleProp, ViewStyle } from 'react-native';
+import { Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, ViewStyle } from 'react-native';
 interface Props {
     id?: number | string;
     renderLoading?: () => React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
     loadDataAsync: () => Promise<any[]>;
     renderItem: ListRenderItem<any>;
     defaultData?: any[];
-    style?: StyleProp<ViewStyle>;
+    style?: ViewStyle;
     isUsingInteraction?: boolean;
     keyboardShouldPersistTaps?: boolean | "always" | "never" | "handled";
     ItemSeparatorComponent?: React.ComponentType<any> | (() => React.ReactElement<any>) | null;
@@ -27,7 +27,7 @@ interface Props {
     contentInset?: Insets;
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
     ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
-    contentContainerStyle?: StyleProp<ViewStyle>;
+    contentContainerStyle?: ViewStyle;
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
     showsHorizontalScrollIndicator?: boolean;
 }
@@ -52,7 +52,7 @@ export declare class FlatListLoad extends Component<Props, State> {
     /**như hàm notifyDataSetChanged của android, ko gây loading lại từ đầu listView*/
     notifyDataSetChanged(isReloadData: boolean): Promise<void>;
     shouldComponentUpdate(nextProps: any, nextState: any): boolean;
-    render(): React.ComponentClass<any, any> | JSX.Element | (() => React.ReactElement<any, string | ((props: any) => React.ReactElement<any, string | any | (new (props: any) => React.Component<any, any, any>)>) | (new (props: any) => React.Component<any, any, any>)>);
+    render(): JSX.Element | React.ComponentClass<any, any> | (() => React.ReactElement<any, string | ((props: any) => React.ReactElement<any, string | any | (new (props: any) => React.Component<any, any, any>)>) | (new (props: any) => React.Component<any, any, any>)>);
     private _renderError;
     private _renderLoading;
     private static _renderXbutton;

@@ -27,7 +27,7 @@ interface Props {
     /**  text which appears after every p element   */
     paragraphBreak?: string
     /***/
-    style?: StyleProp<ViewStyle>
+    style?: ViewStyle
 }
 
 //https://github.com/jsdf/react-native-htmlview
@@ -43,7 +43,7 @@ export default class HTMLView extends PureComponent<Props, any> {
         if (!BODY_TAG_PATTERN.test(value))
             value = `<body> ${value} </body>`;
         return (
-            <View style={[style]}>
+            <View style={style}>
                 <HTMLViewLib ref={(ref) => {this.htmlView = ref}} value={value} {...otherProp}
                              stylesheet={styles}/>
             </View>

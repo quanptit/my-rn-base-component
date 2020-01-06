@@ -1,4 +1,4 @@
-import { PureComponent } from 'react';
+import { PureComponent, ReactInstance } from 'react';
 import { StyleProp, TextStyle, ViewStyle, ImageProps } from 'react-native';
 export declare enum ButtonModel {
     primary = 1,
@@ -27,21 +27,17 @@ export interface ButtonProps {
     delayLongPress?: number;
     background?: any;
     title?: string;
-    icon?: {
-        iconName: string;
-        color?: string;
-        fontSize?: number;
-    };
+    renderIcon?: (key: any, color: string, style: any) => ReactInstance;
     image?: ImageProps;
     accessibilityLabel?: string;
     activityIndicatorColor?: string;
     textStyle?: StyleProp<TextStyle>;
-    disabledStyle?: StyleProp<ViewStyle>;
+    disabledStyle?: ViewStyle;
     onPress?: () => any;
     onLongPress?: () => any;
     onPressIn?: () => any;
     onPressOut?: () => any;
-    style?: StyleProp<ViewStyle>;
+    style?: ViewStyle;
 }
 export declare class Button extends PureComponent<ButtonProps> {
     static defaultProps: {

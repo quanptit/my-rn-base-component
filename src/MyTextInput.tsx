@@ -31,7 +31,7 @@ export class MyTextInput extends PureComponentSkipFunction<Props, State> {
         const {style, onChangeText, ...restProps} = this.props;
         return (
             <TextInput ref={(ref) => {this.textInput = ref}}
-                       style={[styles.inputContainer, style]}
+                       style={[styles.inputContainer, style as any]}
                        {...restProps}
                        underlineColorAndroid="transparent"
                        value={this.state.text}

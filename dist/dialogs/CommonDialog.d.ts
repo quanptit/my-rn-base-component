@@ -1,6 +1,6 @@
 import { Component, ReactInstance } from 'react';
-import { ViewProps } from 'react-native';
-interface Props extends ViewProps {
+import { ViewStyle } from 'react-native';
+interface Props {
     title?: string;
     message?: string;
     btnOk?: {
@@ -15,6 +15,7 @@ interface Props extends ViewProps {
     };
     dismissOnTouchOutside?: boolean;
     renderOtherChild?: () => ReactInstance;
+    style?: ViewStyle;
 }
 export default class CommonDialog extends Component<Props> {
     static defaultProps: {

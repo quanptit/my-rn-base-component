@@ -6,6 +6,7 @@ import { CommonUtils, isIOS, sendError } from 'my-rn-base-utils';
 import { isEqual } from 'lodash';
 import { RenderUtils } from "./utils/RenderUtils";
 import { getStringsCommon } from "my-rn-common-resource";
+import { IconClose } from "./common-icons/IconClose";
 /**Chỉ thay đổi khi prop: id hoặc hide thay đổi. Khi thay đổi sẽ loadDataAsync lại. nếu không muốn gọi forceUpdate*/
 export class VContainerLoad extends Component {
     constructor(props) {
@@ -85,7 +86,7 @@ export class VContainerLoad extends Component {
     }
     _renderXbutton() {
         return (<Button model={ButtonModel.transparent} onPress={() => CommonUtils.onBackPress()} style={styles.xButton}>
-                {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
+                <IconClose fontSize={33} color="#cc1a00"/>
             </Button>);
     }
 }

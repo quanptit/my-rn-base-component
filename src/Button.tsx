@@ -1,4 +1,4 @@
-import React, {Component, PureComponent} from 'react'
+import React, {Component, PureComponent, ReactInstance} from 'react'
 import {
     ActivityIndicator,
     StyleSheet,
@@ -12,7 +12,6 @@ import {
     ViewStyle,
     ImageProps
 } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
 
 export enum ButtonModel {
     primary = 1, light, success, info, warning, danger, dark, transparent, border
@@ -36,19 +35,19 @@ export interface ButtonProps {
     background?: any;
 
     title?: string;
-    icon?: { iconName: string, color?: string, fontSize?: number }
+    renderIcon?: (key: any, color: string, style: any) => ReactInstance
     image?: ImageProps
     accessibilityLabel?: string;
     activityIndicatorColor?: string;
 
     textStyle?: StyleProp<TextStyle>;
-    disabledStyle?: StyleProp<ViewStyle>;
+    disabledStyle?: ViewStyle;
     onPress?: () => any;
     onLongPress?: () => any;
     onPressIn?: () => any;
     onPressOut?: () => any;
 
-    style?: StyleProp<ViewStyle>
+    style?: ViewStyle
 }
 
 export class Button extends PureComponent<ButtonProps> {
@@ -72,16 +71,7 @@ export class Button extends PureComponent<ButtonProps> {
     }
 
     private _renderIcon(textColor: string, marginRightImg: number, marginTopImg: number) {
-        let iconProps = this.props.icon;
-        if (iconProps) {
-            let iconStyle: any = {};
-            if (iconProps.color) iconStyle.color = iconProps.color;
-            if (iconProps.fontSize) iconStyle.fontSize = iconProps.fontSize;
-
-            return (<Icon key={"icon"} name={iconProps.iconName}
-                          style={[{color: textColor, marginRight: marginRightImg, marginTop: marginTopImg}, iconStyle]}/>)
-        }
-        return null
+        return this.props.renderIcon && this.props.renderIcon("icon", textColor, {marginRight: marginRightImg, marginTop: marginTopImg});
     }
 
     private _renderImage(marginRightImg: number, marginTopImg: number) {
@@ -101,7 +91,7 @@ export class Button extends PureComponent<ButtonProps> {
     private _renderTitleAndIcon(textColor: string) {
         let childElements = [];
         let marginRightImg = 0, marginTopImg = 0;
-        if (this.props.icon || this.props.image) {
+        if (this.props.renderIcon || this.props.image) {
             if (this.props.title != null && this.props.isVertical)
                 marginTopImg = 5;
             else

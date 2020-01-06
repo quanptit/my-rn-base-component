@@ -1,11 +1,11 @@
 import { Component, ReactElement } from 'react';
-import { StyleProp, ViewStyle } from "react-native";
+import { ViewStyle } from "react-native";
 export interface BaseLoadingProps {
     renderLoading?: () => any;
     renderError?: () => any;
     diableAutoLoad?: boolean;
     usingInteraction?: boolean;
-    style?: StyleProp<ViewStyle>;
+    style?: ViewStyle;
 }
 export interface BaseLoadingStates {
     isLoading?: boolean;

@@ -24,8 +24,8 @@ declare class Dialog extends Component {
     setDialogState(toValue: number, callback?: () => void): void;
     show(onShowed?: () => {}): void;
     dismiss(onDismissed?: () => {}): void;
-    readonly pointerEvents: string;
-    readonly dialogSize: Object;
+    get pointerEvents(): string;
+    get dialogSize(): Object;
     render(): JSX.Element;
 }
 export default Dialog;

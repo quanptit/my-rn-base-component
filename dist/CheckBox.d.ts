@@ -1,5 +1,5 @@
 import { ReactChild } from 'react';
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { TextStyle, ViewStyle, ImageStyle } from 'react-native';
 import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
 /**
  * react-native-check-box
@@ -9,14 +9,14 @@ import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
  * Blog:http://jiapenghui.com
  */
 interface Props {
-    style?: StyleProp<ViewStyle>;
-    iconStyle?: StyleProp<TextStyle>;
+    style?: ViewStyle;
+    iconStyle?: ImageStyle;
     leftText?: string;
-    leftTextStyle?: StyleProp<TextStyle>;
+    leftTextStyle?: TextStyle;
     leftTextView?: ReactChild;
     rightText?: string;
     rightTextView?: ReactChild;
-    rightTextStyle?: StyleProp<TextStyle>;
+    rightTextStyle?: TextStyle;
     checkedImage?: ReactChild;
     unCheckedImage?: ReactChild;
     onClick?: (checkbox: CheckBox) => void;

@@ -1,5 +1,5 @@
 import { Component, PureComponent } from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 interface Props {
     value: string;
     /**a function which will be called with a url when a link is pressed. Passing this prop will override how links are handled (defaults to calling Linking.openURL(url))*/
@@ -20,7 +20,7 @@ interface Props {
     /**  text which appears after every p element   */
     paragraphBreak?: string;
     /***/
-    style?: StyleProp<ViewStyle>;
+    style?: ViewStyle;
 }
 export default class HTMLView extends PureComponent<Props, any> {
     private htmlView;

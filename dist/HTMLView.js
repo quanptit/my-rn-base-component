@@ -13,7 +13,7 @@ export default class HTMLView extends PureComponent {
         let { value, style, ...otherProp } = this.props;
         if (!BODY_TAG_PATTERN.test(value))
             value = `<body> ${value} </body>`;
-        return (<View style={[style]}>
+        return (<View style={style}>
                 <HTMLViewLib ref={(ref) => { this.htmlView = ref; }} value={value} {...otherProp} stylesheet={styles}/>
             </View>);
     }

@@ -1,18 +1,19 @@
 import React, {Component, ReactInstance} from 'react'
-import {Dimensions, Text, View, ViewProps} from 'react-native'
+import {Dimensions, Text, View, ViewStyle} from 'react-native'
 import {StyleUtils} from "../StyleUtils";
 import PopupDialog from "./popupDialog/PopupDialog";
 import {Button, ButtonModel} from "../Button";
 
 const s = StyleUtils.getAllStyle();
 
-interface Props extends ViewProps {
+interface Props {
     title?: string
     message?: string
     btnOk?: { text?: string, onPress?: VoidFunction, disableAutoDismis?: boolean }
     btnCancel?: { text?: string, onPress?: VoidFunction, disableAutoDismis?: boolean }
     dismissOnTouchOutside?: boolean
     renderOtherChild?: () => ReactInstance
+    style?: ViewStyle
 }
 
 export default class CommonDialog extends Component<Props> {

@@ -1,10 +1,10 @@
 import React, {Component, PureComponent} from 'react';
-import {StyleSheet, StyleProp, ViewStyle, View} from "react-native";
+import {StyleSheet, ViewStyle, View} from "react-native";
 
 interface Props {
-    style?: StyleProp<ViewStyle>
-    fillStyle?: StyleProp<ViewStyle>
-    unfillStyle?: StyleProp<ViewStyle>
+    style?: ViewStyle
+    fillStyle?: ViewStyle
+    unfillStyle?: ViewStyle
     /**in range: [0 - 1]*/
     progress: number
     paddingBackground?: number

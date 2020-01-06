@@ -6,6 +6,7 @@ import { getStringsCommon } from "my-rn-common-resource";
 import { CommonUtils, isEmpty, isIOS, sendError } from "my-rn-base-utils";
 import { isEqual } from "lodash";
 import { RenderUtils } from "./utils/RenderUtils";
+import { IconClose } from "./common-icons/IconClose";
 /**
  * Sử dụng defaultData để hiển thị trước. sau đó gọi loadDataAsync. và sử dụng data lấy ở đây.
  * Chỉ cập nhật khi prop: id thay đổi. các props khác không tính
@@ -120,7 +121,7 @@ export class FlatListLoad extends Component {
             width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
             top: isIOS() ? 12 : 5
         }}>
-                {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
+                <IconClose fontSize={33} color="#cc1a00"/>
             </Button>);
     }
     //endregion

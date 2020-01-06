@@ -1,4 +1,4 @@
-import { StyleProp, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 export interface PopupDialogType extends DialogType {
     dialogTitle?: any;
 }
@@ -20,7 +20,7 @@ export declare type DialogType = {
     onDismissed?: any;
     actions?: Array<any>;
     children: any;
-    style?: StyleProp<ViewStyle>;
+    style?: ViewStyle;
 };
 export declare type DialogButtonType = {
     text: string;

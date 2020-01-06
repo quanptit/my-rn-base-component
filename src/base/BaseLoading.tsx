@@ -6,13 +6,14 @@ import {getStringsCommon} from "my-rn-common-resource";
 import {RenderUtils} from '../utils/RenderUtils';
 import Spinner from '../Spinner';
 import {Button, ButtonModel} from '../Button';
+import {IconClose} from "../common-icons/IconClose";
 
 export interface BaseLoadingProps {
     renderLoading?: () => any,
     renderError?: () => any, //renderErrorView(reloadCallback)
     diableAutoLoad?: boolean,
     usingInteraction?: boolean
-    style?: StyleProp<ViewStyle>
+    style?: ViewStyle
 }
 
 export interface BaseLoadingStates {
@@ -106,7 +107,7 @@ export abstract class BaseLoading<P extends BaseLoadingProps, S extends BaseLoad
                         width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
                         top: isIOS() ? 12 : 5
                     }}>
-                {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
+                <IconClose fontSize={33} color="#cc1a00"/>
             </Button>
         )
     }

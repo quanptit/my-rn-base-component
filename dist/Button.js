@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { ActivityIndicator, StyleSheet, TouchableNativeFeedback, TouchableOpacity, Platform, View, Text, Image } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 export var ButtonModel;
 (function (ButtonModel) {
     ButtonModel[ButtonModel["primary"] = 1] = "primary";
@@ -23,16 +22,7 @@ export class Button extends PureComponent {
             </Text>);
     }
     _renderIcon(textColor, marginRightImg, marginTopImg) {
-        let iconProps = this.props.icon;
-        if (iconProps) {
-            let iconStyle = {};
-            if (iconProps.color)
-                iconStyle.color = iconProps.color;
-            if (iconProps.fontSize)
-                iconStyle.fontSize = iconProps.fontSize;
-            return (<Icon key={"icon"} name={iconProps.iconName} style={[{ color: textColor, marginRight: marginRightImg, marginTop: marginTopImg }, iconStyle]}/>);
-        }
-        return null;
+        return this.props.renderIcon && this.props.renderIcon("icon", textColor, { marginRight: marginRightImg, marginTop: marginTopImg });
     }
     _renderImage(marginRightImg, marginTopImg) {
         let imageProps = this.props.image;
@@ -47,7 +37,7 @@ export class Button extends PureComponent {
     _renderTitleAndIcon(textColor) {
         let childElements = [];
         let marginRightImg = 0, marginTopImg = 0;
-        if (this.props.icon || this.props.image) {
+        if (this.props.renderIcon || this.props.image) {
             if (this.props.title != null && this.props.isVertical)
                 marginTopImg = 5;
             else

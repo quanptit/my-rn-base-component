@@ -1,23 +1,9 @@
 import React, {Component} from 'react'
 import {Text, View} from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import {CachedImage} from 'my-rn-cached-image'
 import {Touchable} from "../Touchable";
 
 export class RenderUtils {
-
-    public static renderIcon(name: string, fontSize?: number, color?: string, style?: any) {
-        return (
-            <Icon name={name} style={[{color: color, fontSize: fontSize}, style]}/>
-        )
-    }
-
-    public static renderMaterialIcon(name: string, fontSize?: number, color?: string, style?: any) {
-        return (
-            <MaterialIcons name={name} style={[{color: color, fontSize: fontSize}, style]}/>
-        )
-    }
 
     public static renderSeparate(style?, key?) {
         return <View key={key} style={[{height: 1, backgroundColor: "#CCCCCCAA"}, style]}/>

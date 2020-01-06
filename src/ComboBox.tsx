@@ -8,6 +8,7 @@ import {StyleUtils} from "./StyleUtils";
 import {RenderUtils} from "./utils/RenderUtils";
 import {isEmpty} from "my-rn-base-utils";
 import {DialogUtils} from "./dialogs/DialogUtils";
+import {IconArrowDropDown} from "./common-icons/IconArrowDropDown";
 
 const s = StyleUtils.getAllStyle();
 const heightItem = 40;
@@ -44,9 +45,9 @@ interface Props {
     listData: string[]
     indexSelected: number
     selectedChange: (indexSelected: number) => void
-    textStyle?: StyleProp<TextStyle>
-    textSelectedStyle?: StyleProp<TextStyle>
-    style?: StyleProp<ViewStyle>
+    textStyle?: TextStyle
+    textSelectedStyle?: TextStyle
+    style?: ViewStyle
 }
 
 /*
@@ -79,7 +80,7 @@ export class ComboBox extends PureComponentSkipFunction <Props> {
                  onPress={this.showListItem.bind(this)}
                  style={[styles.container, styles.paddingItem, this.props.style]}>
                 <TextCustom value={currentValue} style={[s.flex_i, this.props.textSelectedStyle]}/>
-                {RenderUtils.renderIcon("md-arrow-dropdown", 25, "#666666")}
+                <IconArrowDropDown fontSize={26} color="#666666"/>
             </Row>
         )
     }

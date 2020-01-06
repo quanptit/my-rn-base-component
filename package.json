@@ -1,12 +1,13 @@
 {
   "name": "my-rn-base-component",
-  "version": "1.0.4",
+  "version": "2.0.1",
   "description": "my-rn-base-component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "install_npm": "yarn install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "npm_publish": "npm publish",
+    "link_lib": "yarn link react-native react my-rn-common-resource my-rn-cached-image react-native-orientation lodash rn-fetch-blob my-rn-htmlview my-rn-base-utils @types/react @types/react-native"
   },
   "keywords": [
     "react-native"
@@ -20,9 +21,12 @@
     "url": "https://github.com/quanptit/my-rn-base-component.git"
   },
   "nativePackage": false,
-  "dependencies": {
+  "peerDependencies": {
     "my-rn-cached-image": "^1.4.3",
-    "my-rn-htmlview": "^0.15.0",
-    "react-native-vector-icons": "^5.0.0"
+    "my-rn-htmlview": "^0.15.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
   }
 }

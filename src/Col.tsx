@@ -10,7 +10,7 @@ export interface ContainerProps {
     flex?: number
     style?: StyleProp<ViewStyle>
     onPress?: VoidFunction
-    enablemeasureInWindow?:boolean
+    enablemeasureInWindow?: boolean
 }
 
 //https://github.com/hyrwork/react-native-row

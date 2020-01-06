@@ -6,6 +6,7 @@ import {CommonUtils, isIOS, sendError} from 'my-rn-base-utils';
 import {isEqual} from 'lodash';
 import {RenderUtils} from "./utils/RenderUtils";
 import {getStringsCommon} from "my-rn-common-resource";
+import {IconClose} from "./common-icons/IconClose";
 
 interface State {
     isLoading?: boolean,
@@ -28,7 +29,7 @@ export interface VContainerLoadProps {
     skipContainerStyleIfHasChild?: boolean,
     // Khi Id change => reRender nhưng không reload
     skipReloadFromIdChange?: boolean
-    contentContainerStyle?: StyleProp<ViewStyle>
+    contentContainerStyle?: ViewStyle
 }
 
 /**Chỉ thay đổi khi prop: id hoặc hide thay đổi. Khi thay đổi sẽ loadDataAsync lại. nếu không muốn gọi forceUpdate*/
@@ -127,7 +128,7 @@ export abstract class VContainerLoad extends Component<VContainerLoadProps, Stat
         return (
             <Button model={ButtonModel.transparent} onPress={() => CommonUtils.onBackPress()}
                     style={styles.xButton}>
-                {RenderUtils.renderIcon("md-close", 33, '#cc1a00')}
+                <IconClose fontSize={33} color="#cc1a00"/>
             </Button>
         )
     }
