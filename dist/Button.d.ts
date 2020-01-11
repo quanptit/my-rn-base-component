@@ -32,12 +32,12 @@ export interface ButtonProps {
     accessibilityLabel?: string;
     activityIndicatorColor?: string;
     textStyle?: StyleProp<TextStyle>;
-    disabledStyle?: ViewStyle;
+    disabledStyle?: StyleProp<ViewStyle>;
     onPress?: () => any;
     onLongPress?: () => any;
     onPressIn?: () => any;
     onPressOut?: () => any;
-    style?: ViewStyle;
+    style?: StyleProp<ViewStyle>;
 }
 export declare class Button extends PureComponent<ButtonProps> {
     static defaultProps: {
