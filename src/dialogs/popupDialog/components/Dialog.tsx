@@ -189,7 +189,7 @@ class Dialog extends Component {
         }
 
         return (
-            <View style={[styles.container, hidden, dimensions, this.props.style]} pointerEvents="box-none">
+            <View style={[styles.container, hidden, dimensions, this.props.style as any]} pointerEvents="box-none">
                 <Overlay
                     pointerEvents={overlayPointerEvents}
                     showOverlay={isShowOverlay}

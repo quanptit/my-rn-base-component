@@ -29,7 +29,7 @@ export interface VContainerLoadProps {
     skipContainerStyleIfHasChild?: boolean,
     // Khi Id change => reRender nhưng không reload
     skipReloadFromIdChange?: boolean
-    contentContainerStyle?: ViewStyle
+    contentContainerStyle?: StyleProp<ViewStyle>
 }
 
 /**Chỉ thay đổi khi prop: id hoặc hide thay đổi. Khi thay đổi sẽ loadDataAsync lại. nếu không muốn gọi forceUpdate*/

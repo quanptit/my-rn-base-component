@@ -14,7 +14,7 @@ interface Props {
     loadDataAsync: () => Promise<any[]> // return array. Sau khi load sẽ sử dụng dữ liệu của cái này thay vì default
     renderItem: ListRenderItem<any>
     defaultData?: any[]
-    style?: ViewStyle
+    style?: StyleProp<ViewStyle>
     isUsingInteraction?: boolean
     keyboardShouldPersistTaps?: boolean | "always" | "never" | "handled";
     ItemSeparatorComponent?: React.ComponentType<any> | (() => React.ReactElement<any>) | null;
@@ -28,7 +28,7 @@ interface Props {
     contentInset?: Insets
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null
     ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
-    contentContainerStyle?: ViewStyle
+    contentContainerStyle?: StyleProp<ViewStyle>
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
     showsHorizontalScrollIndicator?:boolean
 }
@@ -144,7 +144,7 @@ export class FlatListLoad extends Component<Props, State> {
     //region utils
     private _renderError() {
         return (
-            <View style={[this.props.contentContainerStyle, this.props.style]}>
+            <View style={[this.props.contentContainerStyle, this.props.style as any]}>
                 {RenderUtils.renderErrorView(getStringsCommon().has_error, () => {
                     // noinspection JSIgnoredPromiseFromCall
                     this.notifyDataSetChanged(true);
@@ -159,7 +159,7 @@ export class FlatListLoad extends Component<Props, State> {
             return this.props.renderLoading();
 
         return (
-            <View style={[this.props.contentContainerStyle, this.props.style]}>
+            <View style={[this.props.contentContainerStyle, this.props.style as any]}>
                 <Spinner style={{marginTop: 60}} size="large" color="gray"/>
             </View>
         )

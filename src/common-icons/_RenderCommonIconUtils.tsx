@@ -1,8 +1,8 @@
 import React from "react";
-import {Image, ImageSourcePropType, ImageStyle, StyleProp} from "react-native";
+import {Image, ImageSourcePropType, ImageStyle, StyleProp, ViewStyle} from "react-native";
 
 export interface CommonIconProps {
-    style?: ImageStyle
+    style?: StyleProp<ImageStyle>
     fontSize: number
     color: string
 }

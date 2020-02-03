@@ -1,6 +1,7 @@
 import { ReactChild } from 'react';
-import { TextStyle, ViewStyle, ImageStyle } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
+import { CommonIconProps } from "./common-icons/_RenderCommonIconUtils";
 /**
  * react-native-check-box
  * Checkbox component for react native, it works on iOS and Android
@@ -9,14 +10,14 @@ import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
  * Blog:http://jiapenghui.com
  */
 interface Props {
-    style?: ViewStyle;
-    iconStyle?: ImageStyle;
+    style?: StyleProp<ViewStyle>;
+    iconProps?: CommonIconProps;
     leftText?: string;
-    leftTextStyle?: TextStyle;
+    leftTextStyle?: StyleProp<TextStyle>;
     leftTextView?: ReactChild;
     rightText?: string;
     rightTextView?: ReactChild;
-    rightTextStyle?: TextStyle;
+    rightTextStyle?: StyleProp<TextStyle>;
     checkedImage?: ReactChild;
     unCheckedImage?: ReactChild;
     onClick?: (checkbox: CheckBox) => void;

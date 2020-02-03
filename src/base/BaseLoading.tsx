@@ -13,7 +13,7 @@ export interface BaseLoadingProps {
     renderError?: () => any, //renderErrorView(reloadCallback)
     diableAutoLoad?: boolean,
     usingInteraction?: boolean
-    style?: ViewStyle
+    style?: StyleProp<ViewStyle>
 }
 
 export interface BaseLoadingStates {

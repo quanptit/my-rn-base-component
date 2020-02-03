@@ -7,6 +7,7 @@ import {IconRadioButtonOn} from "./common-icons/IconRadioButtonOn";
 import {IconRadioButtonOff} from "./common-icons/IconRadioButtonOff";
 import {IconCheckboxCheck} from "./common-icons/IconCheckboxCheck";
 import {IconCheckboxUncheck} from "./common-icons/IconCheckboxUncheck";
+import {CommonIconProps} from "./common-icons/_RenderCommonIconUtils";
 
 
 /**
@@ -17,16 +18,16 @@ import {IconCheckboxUncheck} from "./common-icons/IconCheckboxUncheck";
  * Blog:http://jiapenghui.com
  */
 interface Props {
-    style?: ViewStyle
-    iconStyle?: ImageStyle
+    style?: StyleProp<ViewStyle>
+    iconProps?: CommonIconProps
 
     leftText?: string
-    leftTextStyle?: TextStyle
+    leftTextStyle?: StyleProp<TextStyle>
     leftTextView?: ReactChild
 
     rightText?: string
     rightTextView?: ReactChild
-    rightTextStyle?: TextStyle
+    rightTextStyle?: StyleProp<TextStyle>
 
     checkedImage?: ReactChild
     unCheckedImage?: ReactChild
@@ -45,7 +46,7 @@ export class CheckBox extends PureComponentSkipFunction<Props> {
         if (this.props.leftTextView) return this.props.leftTextView;
         if (!this.props.leftText) return null;
         return (
-            <Text style={[styles.leftText, this.props.leftTextStyle]}>
+            <Text style={[styles.leftText, this.props.leftTextStyle as any]}>
                 {this.props.leftText}
             </Text>
         )
@@ -55,7 +56,7 @@ export class CheckBox extends PureComponentSkipFunction<Props> {
         if (this.props.rightTextView) return this.props.rightTextView;
         if (!this.props.rightText) return null;
         return (
-            <Text style={[styles.rightText, this.props.rightTextStyle]}>
+            <Text style={[styles.rightText, this.props.rightTextStyle as any]}>
                 {this.props.rightText}
             </Text>
         )
@@ -72,12 +73,12 @@ export class CheckBox extends PureComponentSkipFunction<Props> {
     private genCheckedImage() {
         if (this.props.radio) {
             return this.props.isChecked
-                ? <IconRadioButtonOn fontSize={23} color="black" style={this.props.iconStyle}/>
-                : <IconRadioButtonOff fontSize={23} color="black" style={this.props.iconStyle}/>
+                ? <IconRadioButtonOn fontSize={23} color="black" {...this.props.iconProps}/>
+                : <IconRadioButtonOff fontSize={23} color="black" {...this.props.iconProps}/>
         }
         return this.props.isChecked
-            ? <IconCheckboxCheck fontSize={23} color="black" style={this.props.iconStyle}/>
-            : <IconCheckboxUncheck fontSize={23} color="black" style={this.props.iconStyle}/>
+            ? <IconCheckboxCheck fontSize={23} color="black" {...this.props.iconProps}/>
+            : <IconCheckboxUncheck fontSize={23} color="black" {...this.props.iconProps}/>
     }
 
     async onClick() {
@@ -90,7 +91,7 @@ export class CheckBox extends PureComponentSkipFunction<Props> {
 
     render() {
         return (
-            <Touchable style={[styles.container, this.props.style]} onPress={() => this.onClick()}>
+            <Touchable style={[styles.container, this.props.style as any]} onPress={() => this.onClick()}>
                 {this._renderLeft()}
                 {this._renderImage()}
                 {this._renderRight()}

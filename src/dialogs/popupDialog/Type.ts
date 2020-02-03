@@ -24,7 +24,7 @@ export type DialogType = {
     onDismissed?: any;
     actions?: Array<any>;
     children: any;
-    style?: ViewStyle
+    style?: StyleProp<ViewStyle>
 }
 
 export type DialogButtonType = {

@@ -37,12 +37,12 @@ export class CheckBox extends PureComponentSkipFunction {
     genCheckedImage() {
         if (this.props.radio) {
             return this.props.isChecked
-                ? <IconRadioButtonOn fontSize={23} color="black" style={this.props.iconStyle}/>
-                : <IconRadioButtonOff fontSize={23} color="black" style={this.props.iconStyle}/>;
+                ? <IconRadioButtonOn fontSize={23} color="black" {...this.props.iconProps}/>
+                : <IconRadioButtonOff fontSize={23} color="black" {...this.props.iconProps}/>;
         }
         return this.props.isChecked
-            ? <IconCheckboxCheck fontSize={23} color="black" style={this.props.iconStyle}/>
-            : <IconCheckboxUncheck fontSize={23} color="black" style={this.props.iconStyle}/>;
+            ? <IconCheckboxCheck fontSize={23} color="black" {...this.props.iconProps}/>
+            : <IconCheckboxUncheck fontSize={23} color="black" {...this.props.iconProps}/>;
     }
     async onClick() {
         if (this.props.isReadOnly) {

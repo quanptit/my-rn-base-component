@@ -1,7 +1,7 @@
 /// <reference types="react" />
-import { ImageSourcePropType, ImageStyle } from "react-native";
+import { ImageSourcePropType, ImageStyle, StyleProp } from "react-native";
 export interface CommonIconProps {
-    style?: ImageStyle;
+    style?: StyleProp<ImageStyle>;
     fontSize: number;
     color: string;
 }

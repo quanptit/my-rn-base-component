@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, ViewStyle } from 'react-native';
+import { Insets, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent, StyleProp, ViewStyle } from 'react-native';
 interface Props {
     id?: number | string;
     renderLoading?: () => React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
     loadDataAsync: () => Promise<any[]>;
     renderItem: ListRenderItem<any>;
     defaultData?: any[];
-    style?: ViewStyle;
+    style?: StyleProp<ViewStyle>;
     isUsingInteraction?: boolean;
     keyboardShouldPersistTaps?: boolean | "always" | "never" | "handled";
     ItemSeparatorComponent?: React.ComponentType<any> | (() => React.ReactElement<any>) | null;
@@ -27,7 +27,7 @@ interface Props {
     contentInset?: Insets;
     ListFooterComponent?: React.ComponentClass<any> | React.ReactElement<any> | (() => React.ReactElement<any>) | null;
     ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
-    contentContainerStyle?: ViewStyle;
+    contentContainerStyle?: StyleProp<ViewStyle>;
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
     showsHorizontalScrollIndicator?: boolean;
 }

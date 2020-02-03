@@ -27,7 +27,7 @@ interface Props {
     /**  text which appears after every p element   */
     paragraphBreak?: string
     /***/
-    style?: ViewStyle
+    style?: StyleProp<ViewStyle>
 }
 
 //https://github.com/jsdf/react-native-htmlview

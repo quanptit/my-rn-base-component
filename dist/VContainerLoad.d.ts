@@ -1,5 +1,5 @@
 import { Component, ReactChild } from 'react';
-import { ViewStyle } from "react-native";
+import { StyleProp, ViewStyle } from "react-native";
 interface State {
     isLoading?: boolean;
     isError?: boolean;
@@ -19,7 +19,7 @@ export interface VContainerLoadProps {
     /**nếu ko bị error, empty .., hàm onrender sẽ không áp dụng cái contentContainerStyle truyền từ props*/
     skipContainerStyleIfHasChild?: boolean;
     skipReloadFromIdChange?: boolean;
-    contentContainerStyle?: ViewStyle;
+    contentContainerStyle?: StyleProp<ViewStyle>;
 }
 /**Chỉ thay đổi khi prop: id hoặc hide thay đổi. Khi thay đổi sẽ loadDataAsync lại. nếu không muốn gọi forceUpdate*/
 export declare abstract class VContainerLoad extends Component<VContainerLoadProps, State> {
