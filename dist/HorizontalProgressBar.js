@@ -23,7 +23,8 @@ export class HorizontalProgressBar extends PureComponent {
             marginLeft: margin, marginTop: margin, marginBottom: margin
         };
         return (<View style={style} {...restProps} onLayout={(event) => this.onLayout(event)}>
-                <View style={[{ position: 'absolute', left: margin, right: margin, bottom: margin, top: margin }, this.props.unfillStyle]}/>
+                <View style={[{ position: 'absolute', left: margin, right: margin, bottom: margin, top: margin },
+            this.props.unfillStyle]}/>
                 {innerWidth > 0 && <View style={[progressStyle, this.props.fillStyle]}/>}
                 {children}
             </View>);

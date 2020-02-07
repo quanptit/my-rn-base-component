@@ -1,14 +1,15 @@
 import React, {Component, PureComponent} from 'react';
-import {StyleSheet, ViewStyle, View} from "react-native";
+import {StyleSheet, ViewStyle, View, StyleProp} from "react-native";
 
 interface Props {
-    style?: ViewStyle
-    fillStyle?: ViewStyle
-    unfillStyle?: ViewStyle
+    style?: StyleProp<ViewStyle>
+    fillStyle?: StyleProp<ViewStyle>
+    unfillStyle?: StyleProp<ViewStyle>
     /**in range: [0 - 1]*/
     progress: number
     paddingBackground?: number
 }
+
 /*
 <HorizontalProgressBar style={{flex: 1, marginHorizontal: 6, height: 6}}
                                            paddingBackground={0}
@@ -49,8 +50,10 @@ export class HorizontalProgressBar extends PureComponent<Props, { width: number,
 
         return (
             <View style={style} {...restProps} onLayout={(event) => this.onLayout(event)}>
-                <View style={[{position: 'absolute', left: margin, right: margin, bottom: margin, top: margin}, this.props.unfillStyle]}/>
-                {innerWidth > 0 && <View style={[progressStyle, this.props.fillStyle]}/>}
+                <View
+                    style={[{position: 'absolute', left: margin, right: margin, bottom: margin, top: margin},
+                        this.props.unfillStyle as any]}/>
+                {innerWidth > 0 && <View style={[progressStyle, this.props.fillStyle as any]}/>}
                 {children}
             </View>
         );

@@ -1,5 +1,5 @@
 import React, {Component, ReactInstance} from 'react'
-import {Dimensions, Text, View, ViewStyle} from 'react-native'
+import {Dimensions, StyleProp, Text, View, ViewStyle} from 'react-native'
 import {StyleUtils} from "../StyleUtils";
 import PopupDialog from "./popupDialog/PopupDialog";
 import {Button, ButtonModel} from "../Button";
@@ -13,7 +13,7 @@ interface Props {
     btnCancel?: { text?: string, onPress?: VoidFunction, disableAutoDismis?: boolean }
     dismissOnTouchOutside?: boolean
     renderOtherChild?: () => ReactInstance
-    style?: ViewStyle
+    style?: StyleProp<ViewStyle>
 }
 
 export default class CommonDialog extends Component<Props> {

@@ -10,7 +10,11 @@ export interface CommonIconProps {
     isAnimate?: boolean
 }
 
-export function _RenderCommonIconUtils(props: { source: ImageSourcePropType, fontSize: number, color: string, style?: any, isAnimate?: boolean }) {
+export function _RenderCommonIconUtils(props: {
+    source: ImageSourcePropType, fontSize: number,
+    color: string | Animated.Node<number>,
+    style?: any, isAnimate?: boolean
+}) {
     let {style, color, fontSize, source, isAnimate} = props;
     if (isAnimate)
         return (

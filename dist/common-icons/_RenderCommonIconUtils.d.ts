@@ -10,7 +10,7 @@ export interface CommonIconProps {
 export declare function _RenderCommonIconUtils(props: {
     source: ImageSourcePropType;
     fontSize: number;
-    color: string;
+    color: string | Animated.Node<number>;
     style?: any;
     isAnimate?: boolean;
 }): JSX.Element;

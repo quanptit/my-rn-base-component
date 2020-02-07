@@ -14,6 +14,7 @@ export class RenderUtils {
             {...props}
             source={{uri: url}}
             defaultSource={require("../../assets/placeholder.jpg")}
+            fallbackSource={require("../../assets/placeholder.jpg")}
             style={style}/>
     }
 
