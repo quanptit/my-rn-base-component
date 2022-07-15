@@ -27,6 +27,7 @@ class Overlay extends Component {
             Animated.timing(this.state.opacity, {
                 toValue,
                 duration: this.props.animationDuration,
+                useNativeDriver: false
             }).start();
         }
     }
@@ -43,6 +44,10 @@ class Overlay extends Component {
             </Animated.View>);
     }
 }
+// state: {
+//     opacity: any,
+// }
+// props: OverlayType
 Overlay.defaultProps = {
     backgroundColor: BACKGROUND_COLOR,
     opacity: OPACITY,

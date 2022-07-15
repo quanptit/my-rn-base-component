@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
 })
 
 class Overlay extends Component <OverlayType, any> {
-    state: {
-        opacity: any,
-    }
+    // state: {
+    //     opacity: any,
+    // }
 
-    props: OverlayType
+    // props: OverlayType
 
     static defaultProps = {
         backgroundColor: BACKGROUND_COLOR,
@@ -45,6 +45,7 @@ class Overlay extends Component <OverlayType, any> {
             Animated.timing(this.state.opacity, {
                 toValue,
                 duration: this.props.animationDuration,
+                useNativeDriver: false
             }).start()
         }
     }

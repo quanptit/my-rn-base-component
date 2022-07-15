@@ -37,8 +37,8 @@ export default class DialogTitle extends Component <DialogTitleType, any> {
         const titleItemsAlign = {alignItems: Positions[this.props.titleAlign]}
 
         return (
-            <View style={[styles.title, titleItemsAlign, titleBar, this.props.titleStyle]}>
-                <Text style={[styles.titleText, this.props.titleTextStyle]}>
+            <View style={[styles.title, titleItemsAlign, titleBar, this.props.titleStyle as any]}>
+                <Text style={[styles.titleText, this.props.titleTextStyle as any]}>
                     {this.props.title}
                 </Text>
             </View>

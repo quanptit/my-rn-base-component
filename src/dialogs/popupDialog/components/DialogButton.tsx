@@ -49,9 +49,9 @@ export default class DialogButton extends Component <DialogButtonType, any> {
                 onPress={onPress}
                 disabled={disabled}
                 activeOpacity={activeOpacity}
-                style={[styles.button, buttonAlign, buttonStyle]}>
-                <View style={[styles.textContainer, textContainerStyle]}>
-                    <Text style={[styles.text, disabledText, textStyle]}>
+                style={[styles.button, buttonAlign, buttonStyle as any]}>
+                <View style={[styles.textContainer, textContainerStyle as any]}>
+                    <Text style={[styles.text, disabledText, textStyle as any]}>
                         {text}
                     </Text>
                 </View>
