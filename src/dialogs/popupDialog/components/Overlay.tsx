@@ -61,7 +61,7 @@ class Overlay extends Component <OverlayType, any> {
 
         return (
             <Animated.View
-                pointerEvents={pointerEvents}
+                pointerEvents={pointerEvents as any}
                 style={[styles.overlay, backgroundColor, opacity, dimensions]}
             >
                 <TouchableOpacity onPress={onPress} style={[styles.overlay, dimensions]}/>
