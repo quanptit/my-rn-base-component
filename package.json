@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "install_npm": "yarn install",
+    "npm_login": "npm login",
     "npm_publish": "npm publish",
     "link_lib": "yarn link react-native react my-rn-common-resource my-rn-cached-image react-native-orientation lodash rn-fetch-blob my-rn-htmlview my-rn-base-utils @types/react @types/react-native"
   },
