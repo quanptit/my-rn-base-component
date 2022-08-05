@@ -7,6 +7,7 @@ import PopupDialog from "../dialogs/popupDialog/PopupDialog";
      }
  * */
 export class BaseDialog extends PureComponent {
+    popupDialog;
     // không set => là auto theo content
     getHeight() {
         return undefined;

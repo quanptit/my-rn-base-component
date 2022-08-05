@@ -1,11 +1,12 @@
 {
   "name": "my-rn-base-component",
-  "version": "2.0.21",
+  "version": "3.0.0",
   "description": "my-rn-base-component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "install_npm": "yarn install",
+    "build": "tsc",
     "npm_login": "npm login",
     "npm_publish": "npm publish",
     "link_lib": "yarn link react-native react my-rn-common-resource my-rn-cached-image react-native-orientation lodash rn-fetch-blob my-rn-htmlview my-rn-base-utils @types/react @types/react-native"
@@ -23,7 +24,7 @@
   },
   "nativePackage": false,
   "peerDependencies": {
-    "my-rn-cached-image": "^1.4.3",
+    "react-native-fast-image": "^8.5.11",
     "my-rn-htmlview": "^0.15.0"
   },
   "dependencies": {

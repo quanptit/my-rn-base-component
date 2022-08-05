@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Dialog from './components/Dialog';
 class PopupDialog extends Component {
+    dialog;
     show(onShowed) {
         this.dialog.show(onShowed);
     }

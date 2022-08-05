@@ -12,6 +12,9 @@ import { IconClose } from "./common-icons/IconClose";
  * Chỉ cập nhật khi prop: id thay đổi. các props khác không tính
  * */
 export class FlatListLoad extends Component {
+    flatList;
+    _isMounted;
+    id;
     constructor(props) {
         super(props);
         this.state = {
@@ -103,9 +106,9 @@ export class FlatListLoad extends Component {
     _renderError() {
         return (<View style={[this.props.contentContainerStyle, this.props.style]}>
                 {RenderUtils.renderErrorView(getStringsCommon().has_error, () => {
-            // noinspection JSIgnoredPromiseFromCall
-            this.notifyDataSetChanged(true);
-        }, this.props.showCloseButtonWhenError ? 30 : 0)}
+                // noinspection JSIgnoredPromiseFromCall
+                this.notifyDataSetChanged(true);
+            }, this.props.showCloseButtonWhenError ? 30 : 0)}
                 {this.props.showCloseButtonWhenError && FlatListLoad._renderXbutton()}
             </View>);
     }
@@ -118,9 +121,9 @@ export class FlatListLoad extends Component {
     }
     static _renderXbutton() {
         return (<Button model={ButtonModel.transparent} onPress={() => CommonUtils.onBackPress()} style={{
-            width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
-            top: isIOS() ? 12 : 5
-        }}>
+                width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
+                top: isIOS() ? 12 : 5
+            }}>
                 <IconClose fontSize={33} color="#cc1a00"/>
             </Button>);
     }

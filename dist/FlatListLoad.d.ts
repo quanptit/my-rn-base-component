@@ -52,7 +52,7 @@ export declare class FlatListLoad extends Component<Props, State> {
     /**như hàm notifyDataSetChanged của android, ko gây loading lại từ đầu listView*/
     notifyDataSetChanged(isReloadData: boolean): Promise<void>;
     shouldComponentUpdate(nextProps: any, nextState: any): boolean;
-    render(): JSX.Element | React.ComponentClass<any, any> | (() => React.ReactElement<any, string | ((props: any) => React.ReactElement<any, string | any | (new (props: any) => React.Component<any, any, any>)>) | (new (props: any) => React.Component<any, any, any>)>);
+    render(): JSX.Element | React.ComponentClass<any, any> | (() => React.ReactElement<any, string | React.JSXElementConstructor<any>>);
     private _renderError;
     private _renderLoading;
     private static _renderXbutton;

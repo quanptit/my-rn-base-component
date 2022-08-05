@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { isIOS } from "my-rn-base-utils";
 /**Giống Text bình thường. nhưng textAlignVertical áp dụng cho cả IOS*/
 export class TextCustom extends PureComponent {
+    root;
     render() {
         if (isIOS())
             return this._renderIOS();

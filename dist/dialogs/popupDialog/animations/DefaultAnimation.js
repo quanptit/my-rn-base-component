@@ -2,6 +2,8 @@
 import { Animated } from 'react-native';
 import Animation from './Animation';
 export default class DefaultAnimation extends Animation {
+    animate;
+    animationDuration;
     constructor({ toValue = 0, animationDuration = 200 }) {
         super(toValue);
         this.animationDuration = animationDuration;

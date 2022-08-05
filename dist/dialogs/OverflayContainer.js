@@ -4,6 +4,12 @@ import Orientation from 'react-native-orientation';
 import { Dimensions, TouchableHighlight, View } from 'react-native';
 import { ComponentNoUpdate } from '../base/ComponentNoUpdate';
 export default class OverflayContainer extends ComponentNoUpdate {
+    dialogComponent;
+    popupMenuComponent;
+    positionAnschor;
+    positionOverComponent; // {left, top, width, height}
+    overComponent;
+    listenner;
     showPopupMenu(popupMenuComponent, positionAnschor) {
         console.log("showPopupMenu");
         this.popupMenuComponent = popupMenuComponent;
@@ -104,6 +110,8 @@ export default class OverflayContainer extends ComponentNoUpdate {
                 </View>
             </TouchableHighlight>);
     }
+    //region orientation =====
+    currentOrientation;
     _orientationDidChange(orientation) {
         if (orientation != this.currentOrientation) {
             this.currentOrientation = orientation;

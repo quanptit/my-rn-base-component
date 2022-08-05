@@ -3,6 +3,11 @@ import React from 'react';
 import { ActivityIndicator } from 'react-native';
 import { ComponentNoUpdate } from "./base/ComponentNoUpdate";
 export default class Spinner extends ComponentNoUpdate {
+    static defaultProps = {
+        color: "white",
+        size: "small",
+        animating: true
+    };
     render() {
         // if (Platform.OS === 'android') {
         //     var width, height;
@@ -21,8 +26,3 @@ export default class Spinner extends ComponentNoUpdate {
         // }
     }
 }
-Spinner.defaultProps = {
-    color: "white",
-    size: "small",
-    animating: true
-};

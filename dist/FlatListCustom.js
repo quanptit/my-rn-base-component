@@ -7,6 +7,15 @@ import { sendError } from "my-rn-base-utils";
  * Chỉ thay đổi khi listData thay đổi. extraData của props không tính vì được chuyển vào state
  * */
 export class FlatListCustom extends Component {
+    //region default props
+    static defaultProps = {
+        windowSize: 5,
+        scrollsToTop: false,
+        keyExtractor: (item, index) => { return String(index); },
+        scrollEventThrottle: 16,
+    };
+    //endregion
+    flatList;
     constructor(props) {
         super(props);
         this.state = { extraData: props.extraData || 0 };
@@ -42,10 +51,3 @@ export class FlatListCustom extends Component {
         return this.flatList && this.flatList.scrollToOffset({ animated: animated, offset: offset });
     }
 }
-//region default props
-FlatListCustom.defaultProps = {
-    windowSize: 5,
-    scrollsToTop: false,
-    keyExtractor: (item, index) => { return String(index); },
-    scrollEventThrottle: 16,
-};

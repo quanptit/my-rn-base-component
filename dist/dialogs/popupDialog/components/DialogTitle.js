@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
     },
 });
 export default class DialogTitle extends Component {
+    static defaultProps = {
+        titleAlign: DEFAULT_TITLE_ALIGN,
+        haveTitleBar: HAVE_TITLE_BAR,
+    };
     render() {
         const titleBar = this.props.haveTitleBar ? styles.titleBar : null;
         const titleItemsAlign = { alignItems: Positions[this.props.titleAlign] };
@@ -32,7 +36,3 @@ export default class DialogTitle extends Component {
             </View>);
     }
 }
-DialogTitle.defaultProps = {
-    titleAlign: DEFAULT_TITLE_ALIGN,
-    haveTitleBar: HAVE_TITLE_BAR,
-};

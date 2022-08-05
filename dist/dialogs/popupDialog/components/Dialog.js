@@ -40,6 +40,17 @@ const styles = StyleSheet.create({
     },
 });
 class Dialog extends Component {
+    state;
+    props;
+    static defaultProps = {
+        animationDuration: DEFAULT_ANIMATION_DURATION,
+        dialogAnimation: new DefaultAnimation({ animationDuration: DEFAULT_ANIMATION_DURATION }),
+        width: DEFAULT_WIDTH,
+        dismissOnTouchOutside: DISMISS_ON_TOUCH_OUTSIDE,
+        dismissOnHardwareBackPress: DISMISS_ON_HARDWARE_BACK_PRESS,
+        haveOverlay: HAVE_OVERLAY,
+        show: true,
+    };
     constructor(props) {
         super(props);
         // opened, opening, closed, closing,
@@ -142,24 +153,15 @@ class Dialog extends Component {
                 <Overlay pointerEvents={overlayPointerEvents} showOverlay={isShowOverlay} onPress={this.onOverlayPress} backgroundColor={this.props.overlayBackgroundColor} opacity={this.props.overlayOpacity} animationDuration={this.props.animationDuration}/>
                 <Animated.View //pointerEvents="box-none"
          style={[
-            styles.dialog,
-            dialogSize,
-            this.props.dialogStyle,
-            this.props.dialogAnimation.animations,
-        ]}>
+                styles.dialog,
+                dialogSize,
+                this.props.dialogStyle,
+                this.props.dialogAnimation.animations,
+            ]}>
                     {this.props.children}
                     {this.props.actions}
                 </Animated.View>
             </View>);
     }
 }
-Dialog.defaultProps = {
-    animationDuration: DEFAULT_ANIMATION_DURATION,
-    dialogAnimation: new DefaultAnimation({ animationDuration: DEFAULT_ANIMATION_DURATION }),
-    width: DEFAULT_WIDTH,
-    dismissOnTouchOutside: DISMISS_ON_TOUCH_OUTSIDE,
-    dismissOnHardwareBackPress: DISMISS_ON_HARDWARE_BACK_PRESS,
-    haveOverlay: HAVE_OVERLAY,
-    show: true,
-};
 export default Dialog;

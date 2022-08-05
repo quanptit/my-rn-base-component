@@ -3,6 +3,7 @@ import { StyleSheet, TextInput } from 'react-native';
 import { PureComponentSkipFunction } from "./base/PureComponentSkipFunction";
 /**Component không update, nếu muốn update => Tạo component với key khác*/
 export class MyTextInput extends PureComponentSkipFunction {
+    textInput;
     constructor(props) {
         super(props);
         this.state = { text: this.props.initialValue };

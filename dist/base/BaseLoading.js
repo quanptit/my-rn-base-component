@@ -69,9 +69,9 @@ export class BaseLoading extends Component {
     }
     _renderXbutton() {
         return (<Button model={ButtonModel.transparent} onPress={() => CommonUtils.onBackPress()} style={{
-            width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
-            top: isIOS() ? 12 : 5
-        }}>
+                width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,
+                top: isIOS() ? 12 : 5
+            }}>
                 <IconClose fontSize={33} color="#cc1a00"/>
             </Button>);
     }

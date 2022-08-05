@@ -5,6 +5,7 @@ import { Alert, Linking } from "react-native";
 import CommonDialog from "./CommonDialog";
 import ProgressDialog from "./ProgressDialog";
 export class DialogUtils {
+    static overflayContainer;
     static showDialog(dialogComponent) {
         console.log("Show Dialog");
         if (DialogUtils.overflayContainer != undefined)

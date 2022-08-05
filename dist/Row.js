@@ -3,6 +3,7 @@ import { View, StyleSheet } from "react-native";
 import { Touchable } from './Touchable';
 //https://github.com/hyrwork/react-native-row
 export class Row extends Component {
+    root;
     constructor(props) {
         super(props);
         if (this.props.enablemeasureInWindow) {

@@ -50,6 +50,12 @@ const styles = StyleSheet.create({
     }
 * */
 export class ComboBox extends PureComponentSkipFunction {
+    static defaultProps = {
+        indexSelected: 0,
+        textStyle: [styles.textStyle, s.f_nor],
+        textSelectedStyle: [styles.textSelectedStyle, s.f_nor]
+    };
+    root;
     render() {
         let { indexSelected } = this.props;
         let currentValue = indexSelected >= 0 ? this.props.listData[indexSelected] : null;
@@ -100,17 +106,12 @@ export class ComboBox extends PureComponentSkipFunction {
     }
     _renderItem(item, index) {
         return (<Col dial={4} style={[styles.paddingItem, styles.containerItem]} onPress={() => {
-            if (index !== this.props.indexSelected) {
-                this.props.selectedChange(index);
-            }
-            DialogUtils.hideOverComponent();
-        }}>
+                if (index !== this.props.indexSelected) {
+                    this.props.selectedChange(index);
+                }
+                DialogUtils.hideOverComponent();
+            }}>
                 <TextCustom numberOfLines={1} value={item} style={index === this.props.indexSelected ? this.props.textSelectedStyle : this.props.textStyle}/>
             </Col>);
     }
 }
-ComboBox.defaultProps = {
-    indexSelected: 0,
-    textStyle: [styles.textStyle, s.f_nor],
-    textSelectedStyle: [styles.textSelectedStyle, s.f_nor]
-};

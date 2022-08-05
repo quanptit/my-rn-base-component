@@ -15,6 +15,16 @@ const styles = StyleSheet.create({
     },
 });
 class Overlay extends Component {
+    // state: {
+    //     opacity: any,
+    // }
+    // props: OverlayType
+    static defaultProps = {
+        backgroundColor: BACKGROUND_COLOR,
+        opacity: OPACITY,
+        animationDuration: ANIMATION_DURATION,
+        showOverlay: SHOW_OVERLAY,
+    };
     constructor(props) {
         super(props);
         this.state = {
@@ -44,14 +54,4 @@ class Overlay extends Component {
             </Animated.View>);
     }
 }
-// state: {
-//     opacity: any,
-// }
-// props: OverlayType
-Overlay.defaultProps = {
-    backgroundColor: BACKGROUND_COLOR,
-    opacity: OPACITY,
-    animationDuration: ANIMATION_DURATION,
-    showOverlay: SHOW_OVERLAY,
-};
 export default Overlay;

@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
     },
 });
 export default class DialogButton extends Component {
+    static defaultProps = {
+        disabled: DISABLED,
+        align: ALIGN,
+    };
     render() {
         const { text, activeOpacity, disabled, align, onPress, buttonStyle, textStyle, textContainerStyle } = this.props;
         const buttonAlign = { alignSelf: Positions[align] };
@@ -38,7 +42,3 @@ export default class DialogButton extends Component {
             </TouchableOpacity>);
     }
 }
-DialogButton.defaultProps = {
-    disabled: DISABLED,
-    align: ALIGN,
-};

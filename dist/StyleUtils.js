@@ -5,6 +5,14 @@ import { PreferenceUtils } from "my-rn-base-utils";
  * s.f_xsmal
  * */
 export class StyleUtils {
+    //region Constant ====
+    static allStyle;
+    static FONT_XSMALL = 12;
+    static FONT_SMALL = 14;
+    static FONT_NOTMAL = 16;
+    static FONT_XNORMAL = 17;
+    static FONT_LARGE = 18;
+    static FONT_XLARGE = 20;
     static flatten(style) {
         return StyleSheet.flatten(style);
     }
@@ -125,9 +133,3 @@ export class StyleUtils {
         });
     }
 }
-StyleUtils.FONT_XSMALL = 12;
-StyleUtils.FONT_SMALL = 14;
-StyleUtils.FONT_NOTMAL = 16;
-StyleUtils.FONT_XNORMAL = 17;
-StyleUtils.FONT_LARGE = 18;
-StyleUtils.FONT_XLARGE = 20;

@@ -5,6 +5,8 @@ import PopupDialog from "./popupDialog/PopupDialog";
 import { Button, ButtonModel } from "../Button";
 const s = StyleUtils.getAllStyle();
 export default class CommonDialog extends Component {
+    static defaultProps = { dismissOnTouchOutside: true };
+    popupDialog;
     render() {
         let { width } = Dimensions.get("window");
         width = 0.85 * width;
@@ -57,4 +59,3 @@ export default class CommonDialog extends Component {
         this.popupDialog.dismiss();
     }
 }
-CommonDialog.defaultProps = { dismissOnTouchOutside: true };

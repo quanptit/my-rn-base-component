@@ -9,10 +9,14 @@ import { getStringsCommon } from "my-rn-common-resource";
 import { IconClose } from "./common-icons/IconClose";
 /**Chỉ thay đổi khi prop: id hoặc hide thay đổi. Khi thay đổi sẽ loadDataAsync lại. nếu không muốn gọi forceUpdate*/
 export class VContainerLoad extends Component {
+    static defaultProps = {
+        isUsingInteraction: true,
+        skipContainerStyleIfHasChild: true,
+    };
+    id = null;
+    _isMounted = null;
     constructor(props) {
         super(props);
-        this.id = null;
-        this._isMounted = null;
         this.state = { isLoading: true, isError: false };
     }
     async componentDidMount() {
@@ -90,10 +94,6 @@ export class VContainerLoad extends Component {
             </Button>);
     }
 }
-VContainerLoad.defaultProps = {
-    isUsingInteraction: true,
-    skipContainerStyleIfHasChild: true,
-};
 const styles = StyleSheet.create({
     xButton: {
         width: 50, height: 50, paddingLeft: 0, paddingRight: 0, paddingTop: 0, paddingBottom: 0, position: 'absolute', right: 0,

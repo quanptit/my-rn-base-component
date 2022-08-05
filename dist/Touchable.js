@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableNativeFeedback, TouchableOpacity, View, Platform } from "react-native";
 export class Touchable extends Component {
+    root;
     render() {
         if (Platform.OS === "ios") {
             return (<TouchableOpacity {...this.props} ref={(ref) => { this.root = ref; }}>

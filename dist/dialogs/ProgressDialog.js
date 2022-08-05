@@ -3,6 +3,11 @@ import PopupDialog from "./popupDialog/PopupDialog";
 import Spinner from "../Spinner";
 import { TextCustom } from "../TextCustom";
 export default class ProgressDialog extends Component {
+    static defaultProps = {
+        cancelable: true
+    };
+    popupDialog;
+    _isMounted;
     componentDidMount() {
         this._isMounted = true;
     }
@@ -22,6 +27,3 @@ export default class ProgressDialog extends Component {
             </PopupDialog>);
     }
 }
-ProgressDialog.defaultProps = {
-    cancelable: true
-};

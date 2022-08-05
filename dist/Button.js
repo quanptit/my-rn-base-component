@@ -13,6 +13,10 @@ export var ButtonModel;
     ButtonModel[ButtonModel["border"] = 9] = "border";
 })(ButtonModel || (ButtonModel = {}));
 export class Button extends PureComponent {
+    static defaultProps = {
+        primaryColor: "#2196f3"
+    };
+    rootV;
     //region render title and icon ======
     _renderTitle(textColor) {
         if (this.props.title == null)
@@ -88,8 +92,8 @@ export class Button extends PureComponent {
             paddingStyle = styles.buttonPadding;
         if (this.props.disabled === true || this.props.isLoading === true) {
             return (<View ref={(ref) => { this.rootV = ref; }} style={[{ backgroundColor: backgroundColor }, styles.button, borderStyle, paddingStyle,
-                this.props.style, (this.props.disabledStyle || styles.opacity),
-                { flexDirection: (this.props.isVertical ? "column" : "row") }]}>
+                    this.props.style, (this.props.disabledStyle || styles.opacity),
+                    { flexDirection: (this.props.isVertical ? "column" : "row") }]}>
                     {this._renderInnerText(textColor)}
                 </View>);
         }
@@ -110,16 +114,16 @@ export class Button extends PureComponent {
             });
             return (<TouchableNativeFeedback {...touchableProps}>
                     <View ref={(ref) => { this.rootV = ref; }} style={[styles.button, borderStyle, paddingStyle,
-                { backgroundColor: backgroundColor, flexDirection: (this.props.isVertical ? "column" : "row") },
-                this.props.style]}>
+                    { backgroundColor: backgroundColor, flexDirection: (this.props.isVertical ? "column" : "row") },
+                    this.props.style]}>
                         {this._renderInnerText(textColor)}
                     </View>
                 </TouchableNativeFeedback>);
         }
         else {
             return (<TouchableOpacity ref={(ref) => { this.rootV = ref; }} {...touchableProps} style={[styles.button, borderStyle, paddingStyle,
-                { backgroundColor: backgroundColor, flexDirection: (this.props.isVertical ? "column" : "row") },
-                this.props.style]}>
+                    { backgroundColor: backgroundColor, flexDirection: (this.props.isVertical ? "column" : "row") },
+                    this.props.style]}>
                     {this._renderInnerText(textColor)}
                 </TouchableOpacity>);
         }
@@ -135,9 +139,6 @@ export class Button extends PureComponent {
         this.rootV.measure(callback);
     }
 }
-Button.defaultProps = {
-    primaryColor: "#2196f3"
-};
 function getBtnColor(btnMode, primaryColor) {
     let backgroundColor, textColor;
     switch (btnMode) {

@@ -8,6 +8,11 @@ import { View } from "react-native";
                                            progress={this.state.noCorrect / this.state.noTotal}/>
 * */
 export class HorizontalProgressBar extends PureComponent {
+    //region defaultProps and Variable
+    static defaultProps = {
+        progress: 0,
+        paddingBackground: 3,
+    };
     //endregion
     constructor(props) {
         super(props);
@@ -23,7 +28,8 @@ export class HorizontalProgressBar extends PureComponent {
             marginLeft: margin, marginTop: margin, marginBottom: margin
         };
         return (<View style={style} {...restProps} onLayout={(event) => this.onLayout(event)}>
-                <View style={[{ position: 'absolute', left: margin, right: margin, bottom: margin, top: margin }, this.props.unfillStyle]}/>
+                <View style={[{ position: 'absolute', left: margin, right: margin, bottom: margin, top: margin },
+                this.props.unfillStyle]}/>
                 {innerWidth > 0 && <View style={[progressStyle, this.props.fillStyle]}/>}
                 {children}
             </View>);
@@ -34,8 +40,3 @@ export class HorizontalProgressBar extends PureComponent {
             this.setState({ width: width, height: height });
     }
 }
-//region defaultProps and Variable
-HorizontalProgressBar.defaultProps = {
-    progress: 0,
-    paddingBackground: 3,
-};

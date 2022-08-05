@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Text, View} from 'react-native'
-import {CachedImage} from 'my-rn-cached-image'
 import {Touchable} from "../Touchable";
+import { ImageCacheWrap } from './ImageCacheWrap';
 
 export class RenderUtils {
 
@@ -10,12 +10,17 @@ export class RenderUtils {
     }
 
     public static renderImage(url: string, style?, props?) {
-        return <CachedImage
+        return <ImageCacheWrap
             {...props}
             source={{uri: url}}
-            defaultSource={require("../../assets/placeholder.jpg")}
-            fallbackSource={require("../../assets/placeholder.jpg")}
-            style={style}/>
+            style={style}/>;
+
+        // return <CachedImage
+        //     {...props}
+        //     source={{uri: url}}
+        //     defaultSource={require("../../assets/placeholder.jpg")}
+        //     fallbackSource={require("../../assets/placeholder.jpg")}
+        //     style={style}/>
     }
 
     public static renderErrorView(has_error: string, refreshCallback, marginTop = 0) {

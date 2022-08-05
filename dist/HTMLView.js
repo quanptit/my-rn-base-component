@@ -6,6 +6,7 @@ const fontNormal = StyleUtils.getFontNormal();
 const BODY_TAG_PATTERN = /\<\/ *body\>/;
 //https://github.com/jsdf/react-native-htmlview
 export default class HTMLView extends PureComponent {
+    htmlView;
     constructor(props) {
         super(props);
     }
