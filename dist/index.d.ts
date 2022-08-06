@@ -20,6 +20,7 @@ export { Row } from "./Row";
 export { Touchable } from "./Touchable";
 export { BaseDialog } from "./base/BaseDialog";
 export { RenderUtils } from "./utils/RenderUtils";
+export { ImageCacheWrap } from "./utils/ImageCacheWrap";
 export { MyTextInput } from "./MyTextInput";
 export { HorizontalProgressBar } from "./HorizontalProgressBar";
 export { default as HTMLView } from "./HTMLView";
